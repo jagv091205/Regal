@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        header {
+            background-color: white; /* White background color */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        body{
+            background-color: white;
+        }
+
+        .logo img {
+            height: 100px; /* Original logo size */
+        }
+
+         /* Style the search bar */
+        .search-bar {
+            background-color: #e0e0e0; /* Darker shade of white for the search bar */
+            border-radius: 50px; /* More curved corners */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Grow to take available space */
+        }
+
+        .search-bar input {
+            border: none;
+            background-color: transparent;
+            width: 100%; /* Take up all available space */
+            outline: none;
+        }
+
+        /* Style the navigation links */
+        .navigation {
+            background-color: white; /* Change to white background */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Take up all available space */
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 30px; /* Increase padding to add more space */
+            border-radius: 5px; /* Rounded corners for links */
+            margin: 0 40px; /* Increased margin between links */
+            color: #333; /* Text color for links */
+        }
+
+        /* Style the action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px; /* Gap between buttons */
+        }
+
+        /* Style the circle buttons */
+        .circle-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Circular shape for buttons */
+            background-color: #e0e0e0; /* Darker shade of white for the buttons */
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        .catalog-items{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-size:25px;
+            text-align: center;
+            }
+
+        .catalog-items img{
+            height: 400px;
+            width: 450px;
+        }
+
+        .title{
+            margin-bottom:100px;
+        }
+    </style>
+    
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <div class="action-buttons">
+            <button class="circle-button" id="cartButton">🛒</button> <!-- Replace with cart icon -->
+            <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+        </div>
+    </header>
+    <div class="navigation">
+        <a href="homepage.html">Home</a>
+        <a href="Shop.html">Shop</a>
+        <a href="promotion.html">Promotions</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contacts.html">Contacts</a>
+        <a href="Category.html">Categories</a>
+        <a href="About.html">About</a>
+    </div>
+    <div class="catalog-items">
+
+        <div class="items">
+            <img src="Images/b1.png" alt="Hand bag">
+            <div class="title">
+                <p>Regal</p>
+                <p>Micro luggage bag</p>
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="Images/b2.png" alt="Purse">
+            <div class="title">
+                <p>Regal</p>
+                <p>Triomphe Canvas and calfskin </p>
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="Images/b3.png" alt="Bag">
+            <div class="title">
+                <p>Regal</p>
+                <p>Hand bag</p>
+            </div>
+        </div>
+        <div class="items">
+            <img src="Images/b4.png" alt="Bag">
+            <div class="title">
+                <p>Regal</p>
+                <p>Hand Bag</p>
+            </div>
+        </div>
+        <div class="items">
+            <img src="Images/b5.png" alt="Bag">
+            <div class="title">
+                <p>Regal</p>
+                <p>Bagpack</p>
+            </div>
+        </div>
+        <div class="items">
+            <img src="Images/b6.png" alt="Scarf">
+            <div class="title">
+                <p>Regal</p>
+                <p>Scarf</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
