@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Website</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        header {
+            background-color: white; /* White background color */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style the logo */
+        .logo img {
+            height: 100px; /* Original logo size */
+        }
+
+        /* Style the search bar */
+        .search-bar {
+            background-color: #e0e0e0; /* Darker shade of white for the search bar */
+            border-radius: 50px; /* More curved corners */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Grow to take available space */
+        }
+
+        .search-bar input {
+            border: none;
+            background-color: transparent;
+            width: 100%; /* Take up all available space */
+            outline: none;
+        }
+
+        /* Style the navigation links */
+        .navigation {
+            background-color: white; /* Change to white background */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Take up all available space */
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 30px; /* Increase padding to add more space */
+            border-radius: 5px; /* Rounded corners for links */
+            margin: 0 40px; /* Increased margin between links */
+            color: #333; /* Text color for links */
+        }
+
+        /* Style the action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px; /* Gap between buttons */
+        }
+
+        /* Style the circle buttons */
+        .circle-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Circular shape for buttons */
+            background-color: #e0e0e0; /* Darker shade of white for the buttons */
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        /* Style the clothing collection section */
+        .clothing-collection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px auto;
+            max-width: 100%; /* Adjust the maximum width as needed */
+            position: relative; /* Added for positioning of prev and next buttons */
+        }
+
+        .collection-images {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            transition: transform 0.5s ease; /* Transition for sliding effect */
+        }
+
+        .collection-images img {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            max-height: 100%; /* Limit the maximum height to match the first two images */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Style the button/link images */
+        .button-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto; /* Increased margin */
+        }
+
+        .button-images a {
+            text-decoration: none;
+            margin: 0 40px; /* Increased margin between images */
+        }
+
+        .button-images img {
+            max-width: 200px; /* Increased image size */
+            height: auto;
+        }
+    </style>
+</head>
+<body> 
+    
+    <header>
+        <div class="logo">
+          
+     <img src="logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <div class="action-buttons">
+            <button class="circle-button" id="cartbutton">🛒</button> <!-- Replace with cart icon -->
+            <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+        </div>
+    </header>
+    <div class="navigation">
+        <a href="homepage (2).html">Home</a>
+        <a href="Shop.html">Shop</a>
+        <a href="promotion.html">Promotions</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contacts.html">Contacts</a>
+        <a href="Category.html">Categories</a>
+        <a href="About.html">About</a>
+    </div>
+    <div class="clothing-collection">
+        <div class="collection-images">
+            <img src="display.png" alt="collection image 0">
+            <img src="web img 1.png" alt="Collection Image 1">
+            <img src="img2.png" alt="Collection Image 2">
+            <img src="img3.png" alt="Collection Image 3">
+        </div>
+        <span class="prev" onclick="prevSlide()">&#10094;</span>
+        <span class="next" onclick="nextSlide()">&#10095;</span>
+    </div>
+    <div class="button-images">
+        <a href="link1.html">
+            <img src="women.png" alt="Women" width="1000" height="auto">
+        </a>
+        <a href="link2.html">
+            <img src="accesories.png" alt="Accessories"  width="1000" height="auto">
+        </a>
+        <a href="link3.html">
+            <img src="men.png" alt="Men"  width="1000" height="auto">
+        </a>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.collection-images img');
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex - 1].style.display = 'block';
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
