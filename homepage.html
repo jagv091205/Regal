@@ -143,6 +143,21 @@
             max-width: 200px; /* Increased image size */
             height: auto;
         }
+
+        /* Style the cart and profile pages */
+        .cart-page, .profile-page {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cart-page img, .profile-page img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
     </style>
 </head>
 <body>
@@ -154,8 +169,8 @@
             <input type="text" id="searchInput" placeholder="Search">
         </div>
         <div class="action-buttons">
-            <button class="circle-button" id="cartButton">🛒</button> <!-- Replace with cart icon -->
-            <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+            <button class="circle-button" id="cartButton">🛒</button>
+            <button class="circle-button" id="profileButton">👤</button>
         </div>
     </header>
     <div class="navigation">
@@ -188,6 +203,21 @@
         </a>
     </div>
 
+    <!-- Cart Page -->
+    <div class="cart-page" id="cartPage">
+        <img src="shopping-bags.png" alt="Shopping Bags">
+        <p>Oops! Your cart is empty!</p>
+    </div>
+
+    <!-- Profile Page -->
+    <div class="profile-page" id="profilePage">
+        <!-- Add your profile layout here -->
+        <!-- Example: -->
+        <h2>Profile</h2>
+        <p>Name: John Doe</p>
+        <p>Email: john@example.com</p>
+    </div>
+
     <script>
         let slideIndex = 1;
 
@@ -214,6 +244,26 @@
         }
 
         showSlide(slideIndex);
+
+        // Cart and Profile Page toggle
+        const cartButton = document.getElementById("cartButton");
+        const profileButton = document.getElementById("profileButton");
+        const cartPage = document.getElementById("cartPage");
+        const profilePage = document.getElementById("profilePage");
+
+        cartButton.addEventListener("click", () => {
+            // Toggle the visibility of the cart page
+            cartPage.style.display = cartPage.style.display === "none" ? "block" : "none";
+            // Hide the profile page
+            profilePage.style.display = "none";
+        });
+
+        profileButton.addEventListener("click", () => {
+            // Toggle the visibility of the profile page
+            profilePage.style.display = profilePage.style.display === "none" ? "block" : "none";
+            // Hide the cart page
+            cartPage.style.display = "none";
+        });
     </script>
 </body>
 </html>
