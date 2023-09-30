@@ -143,6 +143,38 @@
             max-width: 200px; /* Increased image size */
             height: auto;
         }
+         /* Reviews Section */
+         .reviews {
+            background-color: #111;
+            padding: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .reviews h2 {
+            color: #45bbca; /* Green header text */
+        }
+
+        .reviews p {
+            margin: 20px 0;
+        }
+
+        .review-slider {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .review {
+            flex-basis: calc(33.33% - 20px); /* Three reviews side by side with some margin */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .review p {
+            color: #fff;
+        }
+
     </style>
 </head>
 <body>
@@ -226,8 +258,84 @@
     <br>
     <br>
     <br>
+   
+    <section class="reviews" style="background-color: rgb(232, 232, 223); padding: 20px;">
+        <h2 style="color: #444;">Reviews</h2>
+        <p style="color: #666;">See what others are saying about our gaming event.</p>
+        <div class="review-slider">
+            <!-- Review 1 -->
+            <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                <div class="rating" style="color: #FFD700; font-size: 24px;">
+                    ★★★★☆
+                </div>
+                <p style="color: #333;">"The shopping experience was so great!"</p>
+                <p style="color: #777;">- John Doe</p>
+            </div>
+            <!-- Review 2 -->
+            <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                <div class="rating" style="color: #FFD700; font-size: 24px;">
+                    ★★★★★
+                </div>
+                <p style="color: #333;">"They have such trendy and classy collection!!!! Can't stop shopping HELP!!"</p>
+                <p style="color: #777;">- Jane Smith</p>
+            </div>
+            <!-- Review 3 -->
+            <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                <div class="rating" style="color: #FFD700; font-size: 24px;">
+                    ★★★★☆
+                </div>
+                <p style="color: #333;">"The experience was so great. Will shop again. They have extremely good customer support as well."</p>
+                <p style="color: #777;">- Robert Johnson</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <p>Meet Our Developers</p>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <!-- Female Developers -->
+            <div style="text-align: center; margin-right: 20px;">
+                <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\Git hub\e_commerce_website\female_avatar_1.png" alt="Female Avatar 1" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>Jagveer</p>
+            </div>
+            <div style="text-align: center; margin-right: 20px;">
+                <img src="female_avatar_2.jpg" alt="Female Avatar 2" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>Mansavi</p>
+            </div>
+            <div style="text-align: center; margin-right: 20px;">
+                <img src="female_avatar_3.jpg" alt="Female Avatar 3" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>Disha</p>
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="female_avatar_3.jpg" alt="Female Avatar 3" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Prachi</p>
+            </div>
+            <!-- Male Developers -->
+            <div style="text-align: center; margin-right: 20px;">
+                <img src="male_avatar_1.jpg" alt="Male Avatar 1" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>Bharat</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="male_avatar_2.jpg" alt="Male Avatar 2" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>Sahil</p>
+            </div>
+        </div>
+    </div>
     
-    <footer style="background-color: #b2acac; text-align: center; padding: 20px;">
+    
+    
+    
+    <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
         <div>
             <p>&copy; 2023 Regal Clothing Website</p>
             <p>
@@ -240,12 +348,13 @@
                 <a href="#">About Us</a>
             </p>
         </div>
+    
         <div>
             <p>Follow us!</p>
-            <a href=""><img src="reddit-icon.png" alt="Reddit Icon"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram Icon"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter Icon"></a>
-            <a href="#"><img src="discord-icon.png" alt="Discord Icon"></a>
+            <a href="#"><img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\Git hub\e_commerce_website\reddit.png" alt="Reddit Icon"></a>
+            <a href="#"><img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\Git hub\e_commerce_website\instagarm.png" alt="Instagram Icon"></a>
+            <a href="#"><img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\Git hub\e_commerce_website\twitter.png" alt="Twitter Icon"></a>
+            <a href="#"><img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\Git hub\e_commerce_website\discord.png" alt="Discord Icon"></a>
             <!-- Add more social media icons and links as needed -->
         </div>
     </footer>
