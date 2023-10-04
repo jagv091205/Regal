@@ -143,12 +143,44 @@
             max-width: 200px; /* Increased image size */
             height: auto;
         }
+         /* Reviews Section */
+         .reviews {
+            background-color: #111;
+            padding: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .reviews h2 {
+            color: #45bbca; /* Green header text */
+        }
+
+        .reviews p {
+            margin: 20px 0;
+        }
+
+        .review-slider {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .review {
+            flex-basis: calc(33.33% - 20px); /* Three reviews side by side with some margin */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .review p {
+            color: #fff;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\logo.png" alt="Logo">
+            <img src="logo.png" alt="Logo">
         </div>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search">
@@ -159,32 +191,32 @@
         </div>
     </header>
     <div class="navigation">
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\homepage.html">Home</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\Shop.html">Shop</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\promotion.html">Promotions</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\Blog.html">Blog</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\Contacts.html">Contacts</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\Category.html">Categories</a>
-        <a href="C:\Users\Jagveer Kaur\OneDrive\Desktop\visualStudios\About.html">About</a>
+        <a href="homepage.html">Home</a>
+        <a href="Shop.html">Shop</a>
+        <a href="promotion.html">Promotions</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contacts.html">Contacts</a>
+        <a href="Category.html">Categories</a>
+        <a href="About.html">About</a>
     </div>
     <div class="clothing-collection">
         <div class="collection-images">
-             <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\display.png" alt="Collection Image 1">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\web img 1.png" alt="Collection Image 2">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\img3.png" alt="Collection Image 3">
+            <img src="display.png" alt="Collection Image 1"> 
+            <img src="web img 1.png" alt="Collection Image 2">
+            <img src="img3.png" alt="Collection Image 3">
         </div>
         <span class="prev" onclick="prevSlide()">&#10094;</span>
         <span class="next" onclick="nextSlide()">&#10095;</span>
     </div>
     <div class="button-images">
         <a href="link1.html">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\women.png" alt="Women" width="2000" height="auto">
+            <img src="women.png" alt="Women" width="2000" height="auto">
         </a>
         <a href="link2.html">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\accesories.png" alt="Accessories"  width="1000" height="auto">
+            <img src="accesories.png" alt="Accessories"  width="1000" height="auto">
         </a>
         <a href="link3.html">
-            <img src="C:\Users\Jagveer Kaur\OneDrive\Desktop\png\men.png" alt="Men"  width="1000" height="auto">
+            <img src="men.png" alt="Men"  width="1000" height="auto">
         </a>
     </div>
 
@@ -226,8 +258,8 @@
     <br>
     <br>
     <br>
-    
-    <footer style="background-color: #b2acac; text-align: center; padding: 20px;">
+   
+    <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
         <div>
             <p>&copy; 2023 Regal Clothing Website</p>
             <p>
@@ -240,13 +272,88 @@
                 <a href="#">About Us</a>
             </p>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    
         <div>
-            <p>Follow us!</p>
-            <a href=""><img src="reddit-icon.png" alt="Reddit Icon"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram Icon"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter Icon"></a>
-            <a href="#"><img src="discord-icon.png" alt="Discord Icon"></a>
-            <!-- Add more social media icons and links as needed -->
+            <p><b> Our Developers </b></p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <!-- Female Developers -->
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="female_avatar_1.png" alt="Female Avatar 1" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Jagveer</p>
+                </div>
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="female_avatar_2.png" alt="Female Avatar 2" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Mansavi</p>
+                </div>
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="female_avatar_3.png" alt="Female Avatar 3" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Disha</p>
+                </div>
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="female_avatar_4.png" alt="Female Avatar 4" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Prachi</p>
+                </div>
+                <!-- Male Developers -->
+                <div style="text-align: center; margin-right: 20px;">
+                    <img src="male_avatar_1.png" alt="Male Avatar 1" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Bharat</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="male_avatar_2.png" alt="Male Avatar 2" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <p>Sahil</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <div>
+            <h2 style="color: #444;">Reviews</h2>
+            <p style="color: #666;">See what others are saying about our gaming event.</p>
+            <div class="review-slider">
+                <!-- Review 1 -->
+                <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                    <div class="rating" style="color: #FFD700; font-size: 24px;">
+                        ★★★★☆
+                    </div>
+                    <p style="color: #333;">"The shopping experience was so great!"</p>
+                    <p style="color: #777;">- John Doe</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                    <div class="rating" style="color: #FFD700; font-size: 24px;">
+                        ★★★★★
+                    </div>
+                    <p style="color: #333;">"They have such trendy and classy collection!!!! Can't stop shopping HELP!!"</p>
+                    <p style="color: #777;">- Jane Smith</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                    <div class="rating" style="color: #FFD700; font-size: 24px;">
+                        ★★★★☆
+                    </div>
+                    <p style="color: #333;">"The experience was so great. Will shop again. They have extremely good customer support as well."</p>
+                    <p style="color: #777;">- Robert Johnson</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <p>Follow us!</p>
+                <a href="#"><img src="reddit.png" alt="Reddit Icon"></a>
+                <a href="#"><img src="instagarm.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="discord.png" alt="Discord Icon"></a>
+                <!-- Add more social media icons and links as needed -->
+            </div>
         </div>
     </footer>
     
