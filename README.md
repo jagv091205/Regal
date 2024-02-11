@@ -13,9 +13,8 @@
   <h2>Technologies Used</h2>
 
   <ul>
-    <li>Team Management</li>
-    <li>Team Leadership</li>
-    <li>Cascading Style Sheets (CSS)</li>
+   
+   <li>Cascading Style Sheets (CSS)</li>
     <li>JavaScript</li>
     <li>HTML</li>
   </ul>
