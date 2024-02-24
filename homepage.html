@@ -439,6 +439,47 @@
         }
         
 
+        /* CSS for social media section */
+.social-media-section {
+    margin-top: 50px;
+}
+
+/* CSS for individual posts */
+.post {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* CSS for interaction buttons */
+.interaction-buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+}
+
+.interaction-buttons button:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Styling for liked/disliked buttons */
+.like-button.liked,
+.dislike-button.disliked {
+    color: #ff0000; /* Change color for liked/disliked buttons */
+}
+
+
 
     </style>
 </head>
@@ -600,7 +641,47 @@
     </div>
         
     
+    <div class="social-media-section">
+        <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Fashion Feed</h2>
+        <div class="post">
+            <img src="outfit1.jpg" alt="Outfit 1">
+            <div class="interaction-buttons">
+                <button class="like-button">❤️</button>
+                <button class="dislike-button">👎</button>
+                <button class="share-button">➡️</button>
+                <button class="comment-button">💬</button>
+            </div>
+        </div>
+        <div class="post">
+            <img src="outfit2.jpg" alt="Outfit 2">
+            <div class="interaction-buttons">
+                <button class="like-button">❤️</button>
+                <button class="dislike-button">👎</button>
+                <button class="share-button">➡️</button>
+                <button class="comment-button">💬</button>
+            </div>
+        </div>
+        <!-- Add more posts as needed -->
+    </div>
     
+
+    <div class="subscription-offer">
+        <div class="subscription-header">
+            <h2>Become a Prime Member!</h2>
+            <p>Unlock exclusive perks and benefits by becoming a Prime Member:</p>
+        </div>
+        <ul class="perks-list">
+            <li><span>🎁</span> Free shipping on all orders</li>
+            <li><span>💰</span> 10% off your first purchase</li>
+            <li><span>🔥</span> Early access to new arrivals and promotions</li>
+            <li><span>👗</span> Personalized styling recommendations</li>
+            <!-- Add more perks as needed -->
+        </ul>
+        <div class="subscription-footer">
+            <p>Join now for just <span>$9.99/month</span> and elevate your shopping experience!</p>
+            <button>Join Prime</button>
+        </div>
+    </div>
    
 
     <script>
@@ -629,6 +710,53 @@
         }
 
         showSlide(slideIndex);
+
+        // JavaScript
+document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Handle like functionality
+        // For example, increment like count or change button appearance
+        const post = button.closest('.post');
+        const likeCount = post.querySelector('.like-count');
+        let currentLikes = parseInt(likeCount.textContent);
+        likeCount.textContent = ++currentLikes;
+        button.classList.add('liked');
+    });
+});
+
+document.querySelectorAll('.dislike-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Handle dislike functionality
+        // For example, increment dislike count or change button appearance
+        const post = button.closest('.post');
+        const dislikeCount = post.querySelector('.dislike-count');
+        let currentDislikes = parseInt(dislikeCount.textContent);
+        dislikeCount.textContent = ++currentDislikes;
+        button.classList.add('disliked');
+    });
+});
+
+document.querySelectorAll('.share-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Handle share functionality
+        // For example, open share modal or copy post link to clipboard
+        const post = button.closest('.post');
+        const postLink = post.querySelector('img').src;
+        // For demonstration, you can use console.log to display the link
+        console.log('Share this post:', postLink);
+    });
+});
+
+document.querySelectorAll('.comment-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Handle comment functionality
+        // For example, open comment section or scroll to comment input
+        const post = button.closest('.post');
+        const commentSection = post.querySelector('.comment-section');
+        commentSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
     </script>
     <br>
     <br>
@@ -642,23 +770,7 @@
     <br>
     <br>
 
-    <div class="subscription-offer">
-        <div class="subscription-header">
-            <h2>Become a Prime Member!</h2>
-            <p>Unlock exclusive perks and benefits by becoming a Prime Member:</p>
-        </div>
-        <ul class="perks-list">
-            <li><span>🎁</span> Free shipping on all orders</li>
-            <li><span>💰</span> 10% off your first purchase</li>
-            <li><span>🔥</span> Early access to new arrivals and promotions</li>
-            <li><span>👗</span> Personalized styling recommendations</li>
-            <!-- Add more perks as needed -->
-        </ul>
-        <div class="subscription-footer">
-            <p>Join now for just <span>$9.99/month</span> and elevate your shopping experience!</p>
-            <button>Join Prime</button>
-        </div>
-    </div>
+    
     
    
     <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
