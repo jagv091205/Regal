@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Website</title>
+    <style> 
+
+/* Style the clothing collection section */
+        .clothing-collection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px auto;
+            max-width: 100%; /* Adjust the maximum width as needed */
+            position: relative; /* Added for positioning of prev and next buttons */
+        }
+
+        .collection-images {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            transition: transform 0.5s ease; /* Transition for sliding effect */
+        }
+
+        .collection-images img {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            max-height: 100%; /* Limit the maximum height to match the first two images */
+        }
+
+        <div class="clothing-collection">
+        <div class="collection-images">
+        <img src="display.png" alt="Collection Image 1"> 
+            <img src="web img 1.png" alt="Collection Image 2">
+            <img src="img3.png" alt="Collection Image 3">
+        </div>
+        <span class="prev" onclick="prevSlide()">&#10094;</span>
+        <span class="next" onclick="nextSlide()">&#10095;</span>
+    </div>
+    <div class="button-images">
+        <a href="link1.html">
+            <img src="women.png" alt="Women" width="2000" height="auto">
+        </a>
+        <a href="link2.html">
+            <img src="accesories.png" alt="Accessories"  width="1000" height="auto">
+        </a>
+        <a href="link3.html">
+            <img src="men.png" alt="Men"  width="1000" height="auto">
+        </a>
+    </div>
