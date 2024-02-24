@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Style the header */
+      header {
+        background-color: white; /* White background color */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Style the logo */
+      .logo img {
+        height: 100px; /* Original logo size */
+      }
+
+      /* Style the search bar */
+      .search-bar {
+        background-color: #e0e0e0; /* Darker shade of white for the search bar */
+        border-radius: 50px; /* More curved corners */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-grow: 1; /* Grow to take available space */
+      }
+
+      .search-bar input {
+        border: none;
+        background-color: transparent;
+        width: 100%; /* Take up all available space */
+        outline: none;
+      }
+      /*style the action button*/
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .circle-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Circular shape for buttons */
+        background-color: #e0e0e0; /* Darker shade of white for the buttons */
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+      .navigation {
+        background-color: white; /* Change to white background */
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Take up all available space */
+      }
+
+      .navigation a {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 30px; /* Increase padding to add more space */
+        border-radius: 5px; /* Rounded corners for links */
+        margin: 0 40px; /* Increased margin between links */
+        color: #333; /* Text color for links */
+      }
+
+      .set1 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set1 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set2 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set2 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set3 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set3 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set4 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set4 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set5 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set5 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set6 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set6 img {
+        width: 350px;
+        height: 450px;
+      }
+      .set7 {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding-left: 50px;
+      }
+      .set7 img {
+        width: 350px;
+        height: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../Images/logo.png" alt="Logo" />
+      </div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search" />
+      </div>
+      <div class="action-buttons">
+        <button class="circle-button" id="cartbutton">🛒</button>
+        <!-- Replace with cart icon -->
+        <button class="circle-button" id="profileButton">👤</button>
+        <!-- Replace with profile icon -->
+      </div>
+    </header>
+    <div class="navigation">
+      <a href="homepage.html">Home</a>
+      <a href="Shop.html">Shop</a>
+      <a href="promotion.html">Promotions</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Contacts.html">Contacts</a>
+      <a href="Category.html">Categories</a>
+      <a href="About.html">About</a>
+    </div>
+
+    <br /><br />
+    <div class="set1">
+      <div>
+        <img src="../Images/M1.png" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Typographic Print V-neck Tshirt</font></p>
+        <p><font size="3">Rs.990</font></p>
+      </div>
+      <div>
+        <img src="../Images/M2.png" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Loose fit graphic prinnt crew</font></p>
+        <p><font size="3">Rs.650</font></p>
+      </div>
+      <div>
+        <img src="../Images/M3.png" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Regular fit spread collar polo</font></p>
+        <p><font size="3">Rs.392</font></p>
+      </div>
+      <div>
+        <img src="../Images/M4.png" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Relaxed fit Graphic Print Crew Neck T shirt</font></p>
+        <p><font size="3">Rs.540</font></p>
+      </div>
+    </div>
+
+    <br /><br />
+    <div class="set2">
+      <div>
+        <img src="../Images/M5.png" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Regular Fit Typographic Print</font></p>
+        <p><font size="3">Rs.450</font></p>
+      </div>
+      <div>
+        <img src="../Images/M6.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3">Black Panther print slim fit Crew Neck Tshirt</font>
+        </p>
+        <p><font size="3">Rs.850</font></p>
+      </div>
+      <div>
+        <img src="../Images/M7.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Graphic Print Sllim fit Neck Tshirt</font></p>
+        <p><font size="3">Rs.450</font></p>
+      </div>
+      <div>
+        <img src="../Images/M8.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3">Relaxed fit typographic print crew New Tshirt</font>
+        </p>
+        <p><font size="3">Rs.480</font></p>
+      </div>
+    </div>
+
+    <br /><br />
+    <div class="set3">
+      <div>
+        <img src="../Images/M9.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Regular fit striped Henley T shirt</font></p>
+        <p><font size="3">Rs.450</font></p>
+      </div>
+      <div>
+        <img src="../Images/M10.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Slim Fit button closure jacket with pockets</font></p>
+        <p><font size="3">Rs.999</font></p>
+      </div>
+      <div>
+        <img src="../Images/M11.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3"
+            >Genuine Leathe collar neck jacket with Insert pocket</font
+          >
+        </p>
+        <p><font size="3">Rs.1200</font></p>
+      </div>
+      <div>
+        <img src="../Images/M12.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Typographic print slim fit Bomber Jacket</font></p>
+        <p><font size="3">Rs.1000</font></p>
+      </div>
+    </div>
+    <br /><br />
+    <div class="set4">
+      <div>
+        <img src="../Images/M13.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Zip Front Bomber jacket</font></p>
+        <p><font size="3">Rs.1999</font></p>
+      </div>
+      <div>
+        <img src="../Images/M14.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3">Quilted zip front jacket with insert pockets.</font>
+        </p>
+        <p><font size="3">Rs.1500</font></p>
+      </div>
+      <div>
+        <img src="../Images/M15.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Zip front jacket with zip pocket</font></p>
+        <p><font size="3">Rs.2500</font></p>
+      </div>
+      <div>
+        <img src="../Images/M16.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Checked slim fit Shacket</font></p>
+        <p><font size="3">Rs.2200</font></p>
+      </div>
+    </div>
+    <br /><br />
+    <div class="set5">
+      <div>
+        <img src="../Images/M17.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Vintage Suikajan Blue Jacket</font></p>
+        <p><font size="3">Rs.3000</font></p>
+      </div>
+      <div>
+        <img src="../Images/M18.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Skinny fit jeans with insert pockets</font></p>
+        <p><font size="3">Rs.2000</font></p>
+      </div>
+      <div>
+        <img src="../Images/M19.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Mid rise skinny fit jeans</font></p>
+        <p><font size="3">Rs.1600</font></p>
+      </div>
+      <div>
+        <img src="../Images/M20.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Skinny fit jeans</font></p>
+        <p><font size="3">Rs.1990</font></p>
+      </div>
+    </div>
+
+    <div class="set6">
+      <div>
+        <img src="../Images/M21.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3">Men camo Print Joggers with Inserted pockets</font>
+        </p>
+        <p><font size="3">Rs.800</font></p>
+      </div>
+      <div>
+        <img src="../Images/M22.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Men Mid Rise Trackpants</font></p>
+        <p><font size="3">Rs.750</font></p>
+      </div>
+      <div>
+        <img src="../Images/M23.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p>
+          <font size="3">Men straight Track Pants with inserted pockets</font>
+        </p>
+        <p><font size="3">Rs.500</font></p>
+      </div>
+      <div>
+        <img src="../Images/M24.PNG" />
+        <p><font size="3">REGAL</font></p>
+        <p><font size="3">Straight Track pants with elastic waists</font></p>
+        <p><font size="3">Rs.1300</font></p>
+      </div>
+    </div>
+  </body>
+</html>
