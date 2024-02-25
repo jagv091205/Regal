@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessories</title>
+
+    <style>
+      /* Reset default margin and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Style the header */
+      header {
+        background-color: white; /* White background color */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Style the logo */
+      .logo img {
+        height: 100px; /* Original logo size */
+      }
+
+      /* Style the search bar */
+      .search-bar {
+        background-color: #e0e0e0; /* Darker shade of white for the search bar */
+        border-radius: 50px; /* More curved corners */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-grow: 1; /* Grow to take available space */
+      }
+
+      .search-bar input {
+        border: none;
+        background-color: transparent;
+        width: 100%; /* Take up all available space */
+        outline: none;
+      }
+
+      /* Style the navigation links */
+      .navigation {
+        background-color: white; /* Change to white background */
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Take up all available space */
+      }
+
+      .navigation a {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 30px; /* Increase padding to add more space */
+        border-radius: 5px; /* Rounded corners for links */
+        margin: 0 40px; /* Increased margin between links */
+        color: #333; /* Text color for links */
+      }
+
+      /* Style the action buttons */
+      .action-buttons {
+        display: flex;
+        gap: 10px; /* Gap between buttons */
+      }
+
+      /* Style the circle buttons */
+      .circle-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Circular shape for buttons */
+        background-color: #e0e0e0; /* Darker shade of white for the buttons */
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+
+      .button-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px auto; /* Increased margin */
+        font-size: 25px;
+      }
+
+      .button-images a {
+        text-decoration: none;
+        margin: 0 40px; /* Increased margin between images */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button-images span {
+        color: black;
+      }
+
+      .button-images img {
+        width: 400px; /* Set the width */
+        height: 500px; /* Set the height */
+        border-radius: 20px; /* Add border radius for curved edges */
+        transition: 200ms;
+      }
+
+      .button-images img:hover {
+        scale: 125%;
+        transition: 200ms;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../Images/logo.png" alt="Logo" />
+      </div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search" />
+      </div>
+      <div class="action-buttons">
+        <button class="circle-button" id="cartButton">🛒</button>
+        <!-- Replace with cart icon -->
+        <button class="circle-button" id="profileButton">👤</button>
+        <!-- Replace with profile icon -->
+      </div>
+    </header>
+    <div class="navigation">
+      <a href="homepage.html">Home</a>
+      <a href="Shop.html">Shop</a>
+      <a href="promotion.html">Promotions</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Contacts.html">Contacts</a>
+      <a href="Category.html">Categories</a>
+      <a href="About.html">About</a>
+    </div>
+    <div class="button-images">
+      <a href="AccMen.html">
+        <img src="../Images/women.png" alt="Women" />
+        <span>Men</span>
+      </a>
+      <a href="AccWomen.html">
+        <img src="../Images/accessories.png" alt="Accessories" />
+        <span>Women</span>
+      </a>
+      <a href="AccKids.html">
+        <img src="../Images/men.jpg" alt="Men" />
+        <span>Kids</span>
+      </a>
+    </div>
+  </body>
+</html>
