@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        header {
+            background-color: white; /* White background color */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style the logo */
+        .logo img {
+            height: 100px; /* Original logo size */
+        }
+
+        /* Style the search bar */
+        .search-bar {
+            background-color: #e0e0e0; /* Darker shade of white for the search bar */
+            border-radius: 50px; /* More curved corners */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Grow to take available space */
+        }
+
+        .search-bar input {
+            border: none;
+            background-color: transparent;
+            width: 100%; /* Take up all available space */
+            outline: none;
+        }
+
+        /* Style the navigation links */
+        .navigation {
+            background-color: white; /* Change to white background */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Take up all available space */
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 30px; /* Increase padding to add more space */
+            border-radius: 5px; /* Rounded corners for links */
+            margin: 0 40px; /* Increased margin between links */
+            color: #333; /* Text color for links */
+        }
+
+        /* Style the action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px; /* Gap between buttons */
+        }
+
+        /* Style the circle buttons */
+        .circle-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Circular shape for buttons */
+            background-color: #e0e0e0; /* Darker shade of white for the buttons */
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        /* Style the clothing collection section */
+        .clothing-collection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px auto;
+            max-width: 100%; /* Adjust the maximum width as needed */
+            position: relative; /* Added for positioning of prev and next buttons */
+        }
+
+        .collection-images {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            transition: transform 0.5s ease; /* Transition for sliding effect */
+        }
+
+        .collection-images img {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            max-height: 100%; /* Limit the maximum height to match the first two images */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Style the button/link images */
+        .button-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto; /* Increased margin */
+        }
+
+        .button-images a {
+            text-decoration: none;
+            margin: 0 40px; /* Increased margin between images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-images img {
+            width: 400px; /* Set the width */
+            height: 500px; /* Set the height */
+            border-radius: 20px; /* Add border radius for curved edges */
+        }
+        .button-images1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto; /* Increased margin */
+            color: #111;
+        }
+
+        .button-images1 a {
+            text-decoration: none;
+            margin: 0 40px; /* Increased margin between images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-images1 img {
+            width: 500px; /* Set the width */
+            height: auto; /* Set the height */
+            border-radius: 20px; /* Add border radius for curved edges */
+        }
+        .button-images1 video {
+            width: 550px; /* Set the width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 20px; /* Add border radius for curved edges */
+            margin-top: 10px; /* Add margin */
+        }
+        
+        .button-images span {
+            font-family: 'Playfair Display', serif; /* Set the font-family to Playfair Display */
+            font-size: 20px; /* Adjust the font size as needed */
+            color: #111;
+        }
+        
+        
+         /* Reviews Section */
+         .reviews {
+            background-color: #111;
+            padding: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .reviews h2 {
+            color: #45bbca; /* Green header text */
+        }
+
+        .reviews p {
+            margin: 20px 0;
+        }
+
+        .review-slider {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .review {
+            flex-basis: calc(33.33% - 20px); /* Three reviews side by side with some margin */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .review p {
+            color: #fff;
+        }
+
+        .button-images a {
+            text-decoration: none;
+            margin: 0 40px; /* Increased margin between images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .infocus-images {
+            display: flex;
+            flex-direction: row; /* Align items horizontally */
+            align-items: flex-start; /* Align items to the left */
+            margin-bottom: 10px; /* Add some margin between Infocus images and text */
+            color: black; /* Set text color to black */
+        }
+        
+        
+        .infocus-images img {
+            width: 720px; /* Set the width of Infocus images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 5px; /* Add some margin between Infocus images */
+        }
+        
+        .button-images h2 {
+            font-family: 'Playfair Display', serif; /* Set the font-family to Playfair Display */
+            font-size: 20px; /* Adjust the font size as needed */
+            color: #111;
+            margin-bottom: 5px; /* Add some space below the heading */
+        }
+
+        /* Hide video controls */
+        .infocus-images video::-webkit-media-controls {
+            display: none !important;
+        }
+
+        .infocus-images video {
+            pointer-events: none; /* Disable pointer events on video */
+        }
+
+        /* Add this CSS code to style the Newsletter Signup Form */
+
+        .newsletter-background {
+            background-color: #f5f5f5; /* Set the background color for the newsletter section */
+            padding: 20px; /* Add padding for spacing */
+            margin-top: 20px; /* Add margin to separate from the content above */
+        }
+        
+        .newsletter-signup {
+            text-align: center;
+            margin: 0 auto; /* Center the newsletter section horizontally */
+            max-width: 600px; /* Limit the maximum width of the newsletter section */
+        }
+        
+        .newsletter-signup h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-signup form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .newsletter-signup input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 250px;
+        }
+        
+        .newsletter-signup button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-signup button:hover {
+            background-color: #555;
+        }
+
+        .latest-news {
+            background-color: #f9f9f9; /* Set the background color for the Latest News section */
+            padding: 20px;
+        }
+        
+        .latest-news-container {
+            max-width: 800px; /* Limit the maximum width of the Latest News content */
+            margin: 0 auto; /* Center the content horizontally */
+        }
+        
+        .latest-news h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .news-article {
+            margin-bottom: 20px;
+        }
+        
+        .news-article h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .news-article p {
+            margin-bottom: 10px;
+        }
+        
+        .news-article a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .news-article a:hover {
+            color: #555;
+        }
+
+
+        .current-offers {
+            margin-top: 50px;
+        }
+        
+        .offer-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .offer-slide {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            padding-right: 20px;
+        }
+        
+        .offer-slide img {
+            width: 300px; /* Set a fixed width */
+            height: 400px; /* Set a fixed height */
+            border-radius: 10px;
+            margin-bottom: 10px;
+            object-fit: cover; /* Ensure the entire image is visible within the rectangle */
+        }
+        
+        
+        .offer-slide p {
+            margin: 0;
+            color: #333;
+
+        }
+
+        .subscription-offer {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        }
+        
+        .subscription-header h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .perks-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto; /* Center the list horizontally */
+            max-width: 500px; /* Adjust the maximum width as needed */
+        }
+        
+        .perks-list li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content horizontally */
+        }
+        
+        .perks-list li span {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        
+        
+        
+        .subscription-footer {
+            font-size: 20px;
+            color: #555;
+        }
+        
+        .subscription-footer span {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .subscription-footer button {
+            padding: 15px 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .subscription-footer button:hover {
+            background-color: #555;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Images/logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" id=""searchInput"" placeholder="Search...." >
+        </div>
+        <div class="action-buttons">
+            <button class="circle-button" id="cartButton">
+                <a href="cart.html">🛒</a>
+            </button> <!-- Replace with cart icon -->
+            <button class="circle-button" id="profileButton">
+                <a href="profile.html">👤</a>
+        </div>
+    </header>
+    <div class="navigation">
+        <a href="homepage.html">Home</a>
+        <a href="Shop.html">Shop</a>
+        <a href="promotion.html">Promotions</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contacts.html">Contacts</a>
+        <a href="Category.html">Categories</a>
+        <a href="About.html">About</a>
+    </div>
+    <div class="clothing-collection">
+        <div class="collection-images">
+            <img src="../Images/display.png" alt="Collection Image 1"> 
+            <img src="../Images/web img 1.png" alt="Collection Image 2">
+            <img src="../Images/img3.png" alt="Collection Image 3">
+        </div>
+        <span class="prev" onclick="prevSlide()">&#10094;</span>
+        <span class="next" onclick="nextSlide()">&#10095;</span>
+    </div>
+    <div class="button-images">
+        <a href="link1.html">
+            <img src="../Images/women.png" alt="Women">
+            <span>Women</span>
+        </a>
+        <a href="link2.html">
+            <img src="../Images/accessories.png" alt="Accessories">
+            <span>Accessories</span>
+        </a>
+        <a href="link3.html">
+            <img src="../Images/men.jpg" alt="Men">
+            <span>Men</span>
+        </a>
+    </div>
+
+    <div class="button-images1">
+        <a href="dress.html">
+            <h2 style="text-align: left; color: black;">InFocus: Dress</h2>
+            <div class="infocus-images">
+                <img src="../Images/dress.jpg" alt="Infocus Button Image" style="width: 720px;">
+                <video width="1000" height="auto" loop autoplay muted>
+                    <source src="../Images/Videos/vidimg1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </a>
+    </div>
+    
+    
+    <div class="button-images1">
+        <a href="t-shirts.html">
+            <h2 style="text-align: left; color: black;"> InFocus: T-shirts</h4>
+            <div class="infocus-images">
+                <img src="../Images/man.jpg" alt="Infocus Button Image">
+                <video width="1000" height="auto" autoplay loop muted>
+                    <source src="../Images/Videos/vidimg2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </a>
+        </div>
+        <div class="button-images1">
+        <a href="accessories.html">
+            <h2 style="text-align: left; color: black;">InFocus: Accessories</h4>
+            <div class="infocus-images">
+                <img src="../Images/accr.jpg" alt="Infocus Button Image">
+                <video width="1000" height="auto" loop autoplay muted>
+                    <source src="../Images/Videos/vidimg3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </a>
+        </div>
+    </div>
+
+    
+    <div class="newsletter-background">
+        <div class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter!</h2>
+            <form id="newsletterForm" action="#" method="post">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="latest-news">
+        <div class="latest-news-container">
+            <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Latest News</h2>
+            <div class="news-article">
+                <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Trend Alert: Neon Colors Making a Comeback</h3>
+                <p style="font-size: 16px; color: #555; margin-bottom: 15px;">Neon colors are back in style this season! From vibrant yellows to bold pinks, neon hues are dominating the fashion runways and making a statement.</p>
+                <a href="#" style="font-size: 16px; color: #007bff; text-decoration: none;">Read More</a>
+            </div>
+            <div class="news-article">
+                <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Virtual Fashion Shows: The Future of Runway Events</h3>
+                <p style="font-size: 16px; color: #555; margin-bottom: 15px;">With the rise of digital technology, virtual fashion shows have become the new norm. Designers are embracing innovative ways to showcase their collections online.</p>
+                <a href="#" style="font-size: 16px; color: #007bff; text-decoration: none;">Read More</a>
+            </div>
+            <div class="news-article">
+                <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Sustainable Fashion: A Growing Trend in the Industry</h3>
+                <p style="font-size: 16px; color: #555; margin-bottom: 15px;">Consumers are increasingly prioritizing sustainability when it comes to fashion. From eco-friendly materials to ethical production practices, sustainable fashion is on the rise.</p>
+                <a href="#" style="font-size: 16px; color: #007bff; text-decoration: none;">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="current-offers">
+        <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Current Offers</h2>
+        <div class="offer-slider">
+            <div class="offer-slide">
+                <img src="../Images/offer1.jpg" alt="Offer 1">
+                <p style="font-size: 16px; font-weight: bold;">Get 20% off on all women's dresses</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer2.jpg" alt="Offer 2">
+                <p style="font-size: 16px; font-weight: bold;">Limited time offer: 30% off on these men's shirt</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer3.jpg" alt="Offer 3">
+                <p style="font-size: 16px; font-weight: bold;">Buy one, get one free on all accessories</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer4.jpg" alt="Offer 1">
+                <p style="font-size: 16px; font-weight: bold;">30%off to the first 100 customers!</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer5.jpg" alt="Offer 2">
+                <p style="font-size: 16px; font-weight: bold;">Buy this grey sweatshirt and get a free shiping!</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer6.jpg" alt="Offer 3">
+                <p style="font-size: 16px; font-weight: bold;">Limited Edition wallet with a 10% discount!</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer7.jpg" alt="Offer 3">
+                <p style="font-size: 16px; font-weight: bold;">Buy one get one free!</p>
+            </div>
+            <div class="offer-slide">
+                <img src="../Images/offer8.jpg" alt="Offer 3">
+                <p style="font-size: 16px; font-weight: bold;">Back in Stock! Hurry and get a 25% discount! </p>
+            </div>
+            <!-- Add more offer slides as needed -->
+        </div>
+    </div>
+    
+    
+   
+    <script>
+        let slideIndex = 1;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.collection-images img');
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex - 1].style.display = 'block';
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        showSlide(slideIndex);
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="subscription-offer">
+        <div class="subscription-header">
+            <h2>Become a Prime Member!</h2>
+            <p>Unlock exclusive perks and benefits by becoming a Prime Member:</p>
+        </div>
+        <ul class="perks-list">
+            <li><span>🎁</span> Free shipping on all orders</li>
+            <li><span>💰</span> 10% off your first purchase</li>
+            <li><span>🔥</span> Early access to new arrivals and promotions</li>
+            <li><span>👗</span> Personalized styling recommendations</li>
+            <!-- Add more perks as needed -->
+        </ul>
+        <div class="subscription-footer">
+            <p>Join now for just <span>$9.99/month</span> and elevate your shopping experience!</p>
+            <button>Join Prime</button>
+        </div>
+    </div>
+    
+   
+    <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
+        <div>
+            <p>&copy; 2023 Regal Clothing Website</p>
+            <p>
+                <a href="#">Terms of Service</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Refund Policy</a> |
+                <a href="#">Imprint</a> |
+                <a href="#">Cookie Settings</a> |
+                <a href="#">Contact Us</a> |
+                <a href="#">About Us</a>
+            </p>
+        </div>
+        <br>
+        
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <p>Follow us!</p>
+                <a href="#"><img src="../Images/reddit.png" alt="Reddit Icon"></a>
+                <a href="#"><img src="../Images/instagarm.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="../Images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="../Images/discord.png" alt="Discord Icon"></a>
+                <!-- Add more social media icons and links as needed -->
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
