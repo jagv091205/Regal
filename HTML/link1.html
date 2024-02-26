@@ -77,96 +77,29 @@
         color: #333; /* Text color for links */
       }
 
-      .set1 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set1 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set2 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set2 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set3 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set3 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set4 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set4 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set5 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set5 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set6 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set6 img {
-        width: 350px;
-        height: 450px;
-      }
-      .set7 {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        padding-left: 50px;
-      }
-      .set7 img {
-        width: 350px;
-        height: 450px;
-      }
+      .catalog-items{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size:3;
+            text-align: center;
+            border:1px solid #cce7d0;
+            }
 
-      /* Media Query for Mobile */
-      @media only screen and (max-width: 600px) {
-        header {
-          padding: 10px;
+        .catalog-items img{
+            width: 350px;
+            height: 350px;
+            width:100%;
+            display:flex;
+            gap: 10px;
+            padding-left: 30px;
         }
 
-        nav ul li {
-          display: block;
-          margin: 10px 0;
+        .title{
+            margin-bottom:100px;
         }
 
-        .content {
-          padding: 10px;
-        }
+       
 
-        footer {
-          padding: 5px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -194,197 +127,271 @@
       <a href="About.html">About</a>
     </div>
 
-    <br /><br />
-    <div class="set1">
-      <div>
-        <img src="../Images/w1.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Textured Top</font></p>
-        <p><font size="3">Rs.750</font></p>
-      </div>
-      <div>
+    <div class="catalog-items">
+
+      <div class="items" data-name="Textured Top" data-price="750.00" data-image="../Images/w1.png" >
+         <img src="../Images/w1.png" />
+         <div class="title">
+             <span>REGAL</span>
+             <h5>Textured Top<h5>
+      
+             <div>
+             <span class="star" data-value="1">&#9733;</span>
+             <span class="star" data-value="2">&#9733;</span>
+             <span class="star" data-value="3">&#9733;</span>
+             <span class="star" data-value="4">&#9733;</span>
+             <span class="star" data-value="5">&#9733;</span>
+         </div>
+         <p><font size="3">Rs.750</font></p>
+         </div>
+        </div>
+
+      <div class="items" data-name="Frindged Textured blouse Top" data-price="900.00" data-image="../Images/w2.png">
         <img src="../Images/w2.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Frindged Textured blouse Top</font></p>
-        <p><font size="3">Rs.900</font></p>
-      </div>
-      <div>
+        <div class="title">
+            <p><font size="3">REGAL</font></p>
+            <p><font size="3">Frindged Textured blouse Top</font></p>
+            <p><font size="3">Rs.900</font></p>
+        </div>
+    </div>
+
+    <div class="items" data-name="Cropped Textured Top" data-price="990.00" data-image="../Images/w3.png">
         <img src="../Images/w3.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Cropped Textured Top</font></p>
-        <p><font size="3">Rs.990</font></p>
-      </div>
-      <div>
+        <div class="title">
+            <p><font size="3">REGAL</font></p>
+            <p><font size="3">Cropped Textured Top</font></p>
+            <p><font size="3">Rs.990</font></p>
+        </div>
+    </div>
+
+    <div class="items" data-name="Pullover sweater" data-price="790.00" data-image="../Images/w4.png">
         <img src="../Images/w4.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Pullover sweater</font></p>
         <p><font size="3">Rs.790</font></p>
       </div>
     </div>
 
-    <br /><br />
-    <div class="set2">
-      <div>
+    
+    <div class="items" data-name="Buttoned shirt" data-price="800.00" data-image="../Images/w5.png">
         <img src="../Images/w5.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Buttoned shirt</font></p>
         <p><font size="3">Rs.800</font></p>
       </div>
-      <div>
+    </div>
+    
+    <div class="items"  data-name="White coloured button jacket" data-price="850.00" data-image="../Images/w6.png">
         <img src="../Images/w6.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">White coloured button jacket</font></p>
         <p><font size="3">Rs.850</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="image"  data-name="Printed Tshirt" data-price="700.00" data-image="../Images/w7.png">
         <img src="../Images/w7.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Printed Tshirt</font></p>
         <p><font size="3">Rs.700</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Typographic Tshirt" data-price="600.00" data-image="../Images/w8.png">
         <img src="../Images/w8.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Typographic Tshirt</font></p>
         <p><font size="3">Rs.600</font></p>
       </div>
     </div>
 
-    <br /><br />
-    <div class="set3">
-      <div>
+    <div class="items"  data-name="color block striped knit top" data-price="990.00" data-image="../Images/w9.png">
         <img src="../Images/w9.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">color block striped knit top</font></p>
         <p><font size="3">Rs.990</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Zip up knit Sweater" data-price="750.00" data-image="../Images/w10.png">
         <img src="../Images/w10.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Zip up knit Sweater</font></p>
         <p><font size="3">Rs.750</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Mid waist patwork flare leg jeans" data-price="1890.00" data-image="../Images/w11.png">
         <img src="../Images/w11.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Mid waist patwork flare leg jeans</font></p>
         <p><font size="3">Rs.1890</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Mid Waist Straight leg jeans" data-price="1400.00" data-image="../Images/w12.png">
         <img src="../Images/w12.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Mid Waist Straight leg jeans</font></p>
         <p><font size="3">Rs.1400</font></p>
       </div>
     </div>
-    <br /><br />
-    <div class="set4">
-      <div>
+
+
+    
+      <div class="items" data-name="High waist wide leg jeans" data-price="1690.00" data-image="../Images/w13.png">
         <img src="../Images/w13.png" />
+      <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">High waist wide leg jeans</font></p>
         <p><font size="3">Rs.1690</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Low waist Straight Leg jeans with side pocket" data-price="1350.00" data-image="../Images/w14.png">
         <img src="../Images/w14.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p>
           <font size="3">Low waist Straight Leg jeans with side pocket</font>
         </p>
         <p><font size="3">Rs.1350</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Slit Flare leg jeans" data-price="1490.00" data-image="../Images/w15.png">
         <img src="../Images/w15.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Slit Flare leg jeans</font></p>
         <p><font size="3">Rs.1490</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Ditsy Floral Midy Dress" data-price="1890.00" data-image="../Images/w16.png">
         <img src="../Images/w16.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Ditsy Floral Midy Dress</font></p>
         <p><font size="3">Rs.1890</font></p>
       </div>
     </div>
-    <br /><br />
-    <div class="set5">
-      <div>
+    
+    <div class="items"  data-name="Midi Block Shirt Dress" data-price="1500.00" data-image="../Images/w17.png"> 
         <img src="../Images/w17.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Midi Block Shirt Dress</font></p>
         <p><font size="3">Rs.1500</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Belted short sleeve shirt Dress" data-price="1900.00" data-image="../Images/w18.png">
         <img src="../Images/w18.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Belted short sleeve shirt Dress</font></p>
         <p><font size="3">Rs.1900</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Short wrap knit Dress with Belt" data-price="1600.00" data-image="../Images/w19.png">
         <img src="../Images/w19.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Short wrap knit Dress with Belt</font></p>
         <p><font size="3">Rs.1600</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Ruffle A-Line dress" data-price="1790.00" data-image="../Images/w20.png">
         <img src="../Images/w20.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Ruffle A-Line dress</font></p>
         <p><font size="3">Rs.1790</font></p>
       </div>
     </div>
 
-    <div class="set6">
-      <div>
+    <div class="items"  data-name="Openwork Knit Pullove" data-price="899.00" data-image="../Images/w21.png">
         <img src="../Images/w21.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Openwork Knit Pullover</font></p>
         <p><font size="3">Rs.899</font></p>
       </div>
-      <div>
+    </div>
+    <div class="items"  data-name="Printed Half Placket Sweatshirt" data-price="1590.00" data-image="../Images/w22.png">
         <img src="../Images/w22.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Printed Half Placket Sweatshirt</font></p>
         <p><font size="3">Rs.1590</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Plain pocket Coat" data-price="1750.00" data-image="../Images/w23.png">
         <img src="../Images/w23.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
-        <p><font size="3">Plaid pocket Coat</font></p>
+        <p><font size="3">Plain pocket Coat</font></p>
         <p><font size="3">Rs.1750</font></p>
       </div>
-      <div>
+    </div>
+   
+    <div class="items"  data-name="Drawstring shirt dress" data-price="3900.00" data-image="../Images/w24.png">
         <img src="../Images/w24.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Drawstring shirt dress</font></p>
         <p><font size="3">Rs.3900</font></p>
       </div>
     </div>
-    <div class="set7">
-      <div>
+   
+    <div class="items"  data-name="Buttoned A-Line Dress" data-price="2900.00" data-image="../Images/w25.png">
         <img src="../Images/w25.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Buttoned A-Line Dress</font></p>
         <p><font size="3">Rs.2990</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Patchwork Aline Dress" data-price="1900.00" data-image="../Images/w26.png">
         <img src="../Images/w26.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Patchwork Aline Dress</font></p>
         <p><font size="3">Rs.1900</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Smoking Aline Dress" data-price="1600.00" data-image="../Images/w27.png">
         <img src="../Images/w27.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Smoking Aline Dress</font></p>
         <p><font size="3">Rs.1600</font></p>
       </div>
-      <div>
+    </div>
+
+    <div class="items"  data-name="Long length Dress with Tassels" data-price="2990.00" data-image="../Images/w28.png">
         <img src="../Images/w28.png" />
+        <div class="title">
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Long length Dress with Tassels</font></p>
         <p><font size="3">Rs.2990</font></p>
+        </div>
       </div>
-    </div>
+  </div>
   </body>
 </html>
