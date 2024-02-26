@@ -77,15 +77,39 @@
         color: #333; /* Text color for links */
       }
 
+      navigation {
+  background-color: #f21414; /* Adjust to your desired background color */
+  padding: 10px 20px;
+  display: flex; /* Horizontal navigation */
+  /* OR display: block; /* Vertical navigation */
+  justify-content: space-between; /* Horizontal navigation */
+  /* OR align-items: center; /* Vertical navigation */
+}
+
+.navigation a {
+  color: #333; /* Adjust to your desired text color */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navigation a:hover {
+  background-color: #50abcf; /* Adjust to your desired hover background color */
+  color: #000; /* Adjust to your desired hover text color */
+}
+
       .set1 {
         width: 100%;
         display: flex;
         gap: 10px;
         padding-left: 50px;
+        
       }
       .set1 img {
         width: 350px;
         height: 450px;
+        
       }
       .set2 {
         width: 100%;
@@ -143,30 +167,90 @@
         gap: 10px;
         padding-left: 50px;
       }
-      .set7 img {
+      .set7 img:hover {
+        
         width: 350px;
         height: 450px;
       }
 
-      /* Media Query for Mobile */
-      @media only screen and (max-width: 600px) {
-        header {
-          padding: 10px;
-        }
-
-        nav ul li {
-          display: block;
-          margin: 10px 0;
-        }
-
-        .content {
-          padding: 10px;
-        }
-
-        footer {
-          padding: 5px;
-        }
+      .add-to-bag {
+  background-color: #ff9900; /* Orange color */
+  color: white;
+  padding: 15px 30px; /* Adjust padding as needed */
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+  width: 350px;
       }
+
+.add-to-bag:hover {
+  background-color: #e68a00; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+      .set1 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+      .set2 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+      .set3 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+      .set4 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+      .set5 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+      .set6 img:hover{
+        opacity: 0.9;
+        border: 5px solid red;
+      }
+
+      .language-dropdown {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .language-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .language-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .language-dropdown:hover .language-dropdown-content {
+            display: block;
+        }
+        /* Style the clothing collection section */
+        .clothing-collection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px auto;
+            max-width: 100%; /* Adjust the maximum width as needed */
+            position: relative; /* Added for positioning of prev and next buttons */
+        }
+      
     </style>
   </head>
   <body>
@@ -183,6 +267,22 @@
         <button class="circle-button" id="profileButton">👤</button>
         <!-- Replace with profile icon -->
       </div>
+
+      <div class="language-dropdown">
+        <button class="circle-button">🌐</button>
+        <div id="google_translate_element">
+        <div class="language-dropdown-content">
+          <select name="" id="languageselect" onchange="changelayout()">
+         
+            <option value="en">English</a>
+            <option value="hin">Hindi</a>
+            <option value="sp">Spanish</a>
+            <option value="fr">French</a>
+            <option value="Gr">German</a>
+            </select>
+        </div>
+        </div>
+    </div>
     </header>
     <div class="navigation">
       <a href="homepage.html">Home</a>
@@ -196,181 +296,288 @@
 
     <br /><br />
     <div class="set1">
-      <div>
-        <img src="../Images/M1.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Typographic Print V-neck Tshirt</font></p>
-        <p><font size="3">Rs.990</font></p>
+      <div data-name="Typographic Print V-neck Tshirt" data-price="990.00" data-image="../Images/M1.png">
+        <a href="#"><img src="../Images/M1.png" alt="Typographic Print V-neck Tshirt"></a>
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Typographic Print V-neck Tshirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1200</span>
+          <span style="color: #f1c40f;">Rs.990</span> (20% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M2.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Loose fit graphic prinnt crew</font></p>
-        <p><font size="3">Rs.650</font></p>
+      <div data-name="Loose Fit Graphic Print Crew" data-price="585.00" data-image="../Images/M2.png">
+        <img src="../Images/M2.png" alt="Loose Fit Graphic Print Crew">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Loose Fit Graphic Print Crew</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.650</span>
+          <span style="color: #f1c40f;">Rs.585</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M3.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Regular fit spread collar polo</font></p>
-        <p><font size="3">Rs.392</font></p>
+      <div data-name="Regular Fit Spread Collar Polo" data-price="372.50" data-image="../Images/M3.png">
+        <img src="../Images/M3.png" alt="Regular Fit Spread Collar Polo">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none; text-align: center;">Regular Fit Spread Collar Polo</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.392</span>
+          <span style="color: #f1c40f;">Rs.372.50</span> (5% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M4.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Relaxed fit Graphic Print Crew Neck T shirt</font></p>
-        <p><font size="3">Rs.540</font></p>
+      <div data-name="Relaxed fit Graphic Print Crew Neck T shirt" data-price="491.50" data-image="../Images/M4.png">
+        <img src="../Images/M4.png" alt="Relaxed fit Graphic Print Crew Neck T shirt">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Graphic Print Crew Neck T shirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.540</span>
+          <span style="color: #f1c40f;">Rs.491.50</span> (9% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
       </div>
     </div>
 
     <br /><br />
     <div class="set2">
-      <div>
-        <img src="../Images/M5.png" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Regular Fit Typographic Print</font></p>
-        <p><font size="3">Rs.450</font></p>
-      </div>
-      <div>
-        <img src="../Images/M6.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3">Black Panther print slim fit Crew Neck Tshirt</font>
+      <div data-name="Regular Fit Typographic Print" data-price="418.50" data-image="../Images/M5.png">
+        <img src="../Images/M5.png" alt="Regular Fit Typographic Print">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Regular Fit Typographic Print</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.450</span>
+          <span style="color: #f1c40f;">Rs.418.50</span> (7% off)
         </p>
-        <p><font size="3">Rs.850</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M7.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Graphic Print Sllim fit Neck Tshirt</font></p>
-        <p><font size="3">Rs.450</font></p>
-      </div>
-      <div>
-        <img src="../Images/M8.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3">Relaxed fit typographic print crew New Tshirt</font>
+      <div data-name="Black Panther print slim fit Crew Neck Tshirt" data-price="722.50" data-image="../Images/M6.png">
+        <img src="../Images/M6.png" alt="Black Panther print slim fit Crew Neck Tshirt">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Black Panther Print  Crew Neck Tshirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.850</span>
+          <span style="color: #f1c40f;">Rs.722.50</span> (15% off)
         </p>
-        <p><font size="3">Rs.480</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+      </div>
+      <div data-name="Graphic Print Slim Fit Neck Tshirt" data-price="427.50" data-image="../Images/M7.png">
+        <img src="../Images/M7.png" alt="Graphic Print Slim Fit Neck Tshirt">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Graphic Print Slim Fit Neck Tshirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.450</span>
+          <span style="color: #f1c40f;">Rs.427.50</span> (5% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
+      </div>
+      <div data-name="Relaxed Fit Typographic Print Crew New Tshirt" data-price="456.00" data-image="../Images/M8.png">
+        <img src="../Images/M8.png" alt="Relaxed Fit Typographic Print Crew New Tshirt">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Relaxed Fit Typographic Crew New Tshirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.480</span>
+          <span style="color: #f1c40f;">Rs.456</span> (5% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐(4 out of 5 stars)</p>
       </div>
     </div>
 
     <br /><br />
     <div class="set3">
-      <div>
-        <img src="../Images/M9.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Regular fit striped Henley T shirt</font></p>
-        <p><font size="3">Rs.450</font></p>
-      </div>
-      <div>
-        <img src="../Images/M10.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Slim Fit button closure jacket with pockets</font></p>
-        <p><font size="3">Rs.999</font></p>
-      </div>
-      <div>
-        <img src="../Images/M11.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3"
-            >Genuine Leathe collar neck jacket with Insert pocket</font
-          >
+      <div data-name="Regular Fit Striped Henley T-shirt" data-price="427.50" data-image="../Images/M9.png">
+        <img src="../Images/M9.png" alt="Regular Fit Striped Henley T-shirt">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Regular Fit Striped Henley T-shirt</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.450</span>
+          <span style="color: #f1c40f;">Rs.427.50</span> (5% off)
         </p>
-        <p><font size="3">Rs.1200</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M12.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Typographic print slim fit Bomber Jacket</font></p>
-        <p><font size="3">Rs.1000</font></p>
+      <div data-name="Slim Fit Button Closure Jacket" data-price="899.00" data-image="../Images/M10.png">
+        <img src="../Images/M10.png" alt="Slim Fit Button Closure Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Slim Fit Button Closure Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.999</span>
+          <span style="color: #f1c40f;">Rs.899</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+      </div>
+      <div data-name="Genuine Leathe Collar Neck Jacket" data-price="1110.00" data-image="../Images/M11.png">
+        <img src="../Images/M11.png" alt="Genuine Leathe Collar Neck Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Genuine Leathe Collar Neck Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1299</span>
+          <span style="color: #f1c40f;">Rs.1110</span> (15% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+      </div>
+      <div data-name="Typographic Print Slim Fit Bomber Jacket" data-price="899.00" data-image="../Images/M12.png">
+        <img src="../Images/M12.png" alt="Typographic Print Slim Fit Bomber Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Typographic Print Slim Fit Bomber Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1000</span>
+          <span style="color: #f1c40f;">Rs.899</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
       </div>
     </div>
     <br /><br />
     <div class="set4">
-      <div>
-        <img src="../Images/M13.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Zip Front Bomber jacket</font></p>
-        <p><font size="3">Rs.1999</font></p>
-      </div>
-      <div>
-        <img src="../Images/M14.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3">Quilted zip front jacket with insert pockets.</font>
+      <div data-name="Zip Front Bomber Jacket" data-price="1699.00" data-image="../Images/M13.png">
+        <img src="../Images/M13.png" alt="Zip Front Bomber Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Zip Front Bomber Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1999</span>
+          <span style="color: #f1c40f;">Rs.1699</span> (15% off)
         </p>
-        <p><font size="3">Rs.1500</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M15.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Zip front jacket with zip pocket</font></p>
-        <p><font size="3">Rs.2500</font></p>
+      <div data-name="Quilted Zip Front Jacket" data-price="1350.00" data-image="../Images/M14.png">
+        <img src="../Images/M14.png" alt="Quilted Zip Front Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Quilted Zip Front Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1500</span>
+          <span style="color: #f1c40f;">Rs.1350</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M16.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Checked slim fit Shacket</font></p>
-        <p><font size="3">Rs.2200</font></p>
+      <div data-name="Zip Front Jacket With Zip Pocket" data-price="2000.00" data-image="../Images/M15.png">
+        <img src="../Images/M15.png" alt="Zip Front Jacket With Zip Pocket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Zip Front Jacket With Zip Pocket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.2500</span>
+          <span style="color: #f1c40f;">Rs.2000</span> (20% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+      </div>
+      <div data-name="Checked Slim Fit Shacket" data-price="1870.00" data-image="../Images/M16.png">
+        <img src="../Images/M16.png" alt="Checked Slim Fit Shacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Checked Slim Fit Shacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.2200</span>
+          <span style="color: #f1c40f;">Rs.1870</span> (15% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐(3 out of 5 stars)</p>
       </div>
     </div>
     <br /><br />
     <div class="set5">
-      <div>
-        <img src="../Images/M17.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Vintage Suikajan Blue Jacket</font></p>
-        <p><font size="3">Rs.3000</font></p>
+      <div data-name="Vintage Suikajan Blue Jacket" data-price="2700.00" data-image="../Images/M17.png">
+        <img src="../Images/M17.png" alt="Vintage Suikajan Blue Jacket">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Vintage Suikajan Blue Jacket</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.3000</span>
+          <span style="color: #f1c40f;">Rs.2700</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M18.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Skinny fit jeans with insert pockets</font></p>
-        <p><font size="3">Rs.2000</font></p>
+      <div data-name="Skinny Fit Jeans" data-price="1800.00" data-image="../Images/M18.png">
+        <img src="../Images/M18.png" alt="Skinny Fit Jeans">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Skinny Fit Jeans</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.2000</span>
+          <span style="color: #f1c40f;">Rs.1800</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐(4 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M19.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Mid rise skinny fit jeans</font></p>
-        <p><font size="3">Rs.1600</font></p>
+      <div data-name="Mid Rise Skinny Fit Jeans" data-price="1472.00" data-image="../Images/M19.png">
+        <img src="../Images/M19.png" alt="Mid Rise Skinny Fit Jeans">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Mid Rise Skinny Fit Jeans</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1600</span>
+          <span style="color: #f1c40f;">Rs.1472</span> (8% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M20.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Skinny fit jeans</font></p>
-        <p><font size="3">Rs.1990</font></p>
+      <div data-name="Skinny Fit Jeans" data-price="1990.00" data-image="../Images/M20.png">
+        <img src="../Images/M20.png" alt="Skinny Fit Jeans">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Skinny Fit Jeans</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.1990</span>
+          <span style="color: #f1c40f;">Rs.1791</span> (10% off)
+        </p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐(4 out of 5 stars)</p>
       </div>
     </div>
+    <br /><br />
 
     <div class="set6">
-      <div>
-        <img src="../Images/M21.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3">Men camo Print Joggers with Inserted pockets</font>
+      <div data-name="Men Camo Print Joggers With Inserted Pockets" data-price="712.50" data-image="../Images/M21.png">
+        <img src="../Images/M21.PNG" alt="Men Camo Print Joggers With Inserted Pockets">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Men Camo Print Joggers With Inserted Pockets</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.750</span>
+          <span style="color: #f1c40f;">Rs.712.50</span> (5% off)
         </p>
-        <p><font size="3">Rs.800</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐(4 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M22.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Men Mid Rise Trackpants</font></p>
-        <p><font size="3">Rs.750</font></p>
-      </div>
-      <div>
-        <img src="../Images/M23.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p>
-          <font size="3">Men straight Track Pants with inserted pockets</font>
+      <div data-name="Men Mid Rise Trackpants" data-price="675.00" data-image="../Images/M22.png">
+        <img src="../Images/M22.png" alt="Men Mid Rise Trackpants">
+        <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+        <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Men Mid Rise Trackpants</a></p>
+        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+          <span style="text-decoration: line-through;">Rs.750</span>
+          <span style="color: #f1c40f;">Rs.675</span> (10% off)
         </p>
-        <p><font size="3">Rs.500</font></p>
+        <button class="add-to-bag">Add to Bag &#128092;</button>
+        <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
       </div>
-      <div>
-        <img src="../Images/M24.PNG" />
-        <p><font size="3">REGAL</font></p>
-        <p><font size="3">Straight Track pants with elastic waists</font></p>
-        <p><font size="3">Rs.1300</font></p>
-      </div>
+        <div data-name="Men Straight Track Pants" data-price="475.00" data-image="../Images/M23.png">
+          <img src="../Images/M23.png" alt="Men Straight Track Pants">
+          <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+          <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Men Straight Track Pants</a></p>
+          <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+            <span style="text-decoration: line-through;">Rs.500</span>
+            <span style="color: #f1c40f;">Rs.475</span> (5% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐(4 out of 5 stars)</p>
+        </div>
+        <div data-name="Straight Track Pants With Elastic Waist" data-price="1170.00" data-image="../Images/M24.png">
+          <img src="../Images/M24.png" alt="Straight Track Pants With Elastic Waist">
+          <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><font size="3">REGAL</font></p>
+          <p style="text-align: center;"><a href="#" style="font-family: Arial, sans-serif; color: #333; font-size: 20px; text-decoration: none;">Straight Track Pants With Elastic Waist</a></p>
+          <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+            <span style="text-decoration: line-through; te;">Rs.1300</span>
+            <span style="color: #f1c40f;">Rs.1170</span> (10% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
+        </div>
     </div>
   </body>
 </html>
