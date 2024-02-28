@@ -97,7 +97,18 @@
         .title{
             margin-bottom:100px;
         }
-
+        
+        .add-to-cart {
+          background-color: #f90;
+          color: #fff;
+          border: none;
+          padding: 8px 15px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .add-to-cart:hover {
+          background-color: #d78000;
+        }
        
 
     </style>
@@ -111,10 +122,12 @@
         <input type="text" id="searchInput" placeholder="Search" />
       </div>
       <div class="action-buttons">
-        <button class="circle-button" id="cartbutton">🛒</button>
-        <!-- Replace with cart icon -->
-        <button class="circle-button" id="profileButton">👤</button>
-        <!-- Replace with profile icon -->
+        <button class="circle-button" id="cartButton">
+          <a href="cart.html">🛒</a>
+      </button> <!-- Replace with cart icon -->
+      <button class="circle-button" id="profileButton">
+          <a href="profile.html">👤</a>
+      </button> <!-- Replace with profile icon -->
       </div>
     </header>
     <div class="navigation">
@@ -143,6 +156,7 @@
              <span class="star" data-value="5">&#9733;</span>
          </div>
          <p><font size="3">Rs.750</font></p>
+         <button class="add-to-cart">Add to Cart</button>
          </div>
         </div>
 
@@ -152,6 +166,7 @@
             <p><font size="3">REGAL</font></p>
             <p><font size="3">Frindged Textured blouse Top</font></p>
             <p><font size="3">Rs.900</font></p>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
     </div>
 
@@ -161,6 +176,7 @@
             <p><font size="3">REGAL</font></p>
             <p><font size="3">Cropped Textured Top</font></p>
             <p><font size="3">Rs.990</font></p>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
     </div>
 
@@ -170,6 +186,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Pullover sweater</font></p>
         <p><font size="3">Rs.790</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -180,6 +197,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Buttoned shirt</font></p>
         <p><font size="3">Rs.800</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
     
@@ -189,6 +207,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">White coloured button jacket</font></p>
         <p><font size="3">Rs.850</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -198,6 +217,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Printed Tshirt</font></p>
         <p><font size="3">Rs.700</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -207,6 +227,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Typographic Tshirt</font></p>
         <p><font size="3">Rs.600</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -216,6 +237,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">color block striped knit top</font></p>
         <p><font size="3">Rs.990</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -225,6 +247,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Zip up knit Sweater</font></p>
         <p><font size="3">Rs.750</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -234,6 +257,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Mid waist patwork flare leg jeans</font></p>
         <p><font size="3">Rs.1890</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -243,6 +267,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Mid Waist Straight leg jeans</font></p>
         <p><font size="3">Rs.1400</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -254,6 +279,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">High waist wide leg jeans</font></p>
         <p><font size="3">Rs.1690</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -265,6 +291,7 @@
           <font size="3">Low waist Straight Leg jeans with side pocket</font>
         </p>
         <p><font size="3">Rs.1350</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -274,6 +301,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Slit Flare leg jeans</font></p>
         <p><font size="3">Rs.1490</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -283,6 +311,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Ditsy Floral Midy Dress</font></p>
         <p><font size="3">Rs.1890</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
     
@@ -292,6 +321,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Midi Block Shirt Dress</font></p>
         <p><font size="3">Rs.1500</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -301,6 +331,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Belted short sleeve shirt Dress</font></p>
         <p><font size="3">Rs.1900</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -310,6 +341,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Short wrap knit Dress with Belt</font></p>
         <p><font size="3">Rs.1600</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -319,6 +351,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Ruffle A-Line dress</font></p>
         <p><font size="3">Rs.1790</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -328,6 +361,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Openwork Knit Pullover</font></p>
         <p><font size="3">Rs.899</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
     <div class="items"  data-name="Printed Half Placket Sweatshirt" data-price="1590.00" data-image="../Images/w22.png">
@@ -336,6 +370,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Printed Half Placket Sweatshirt</font></p>
         <p><font size="3">Rs.1590</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -345,6 +380,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Plain pocket Coat</font></p>
         <p><font size="3">Rs.1750</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
    
@@ -354,6 +390,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Drawstring shirt dress</font></p>
         <p><font size="3">Rs.3900</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
    
@@ -363,6 +400,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Buttoned A-Line Dress</font></p>
         <p><font size="3">Rs.2990</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -372,6 +410,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Patchwork Aline Dress</font></p>
         <p><font size="3">Rs.1900</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -381,6 +420,7 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Smoking Aline Dress</font></p>
         <p><font size="3">Rs.1600</font></p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
 
@@ -390,8 +430,28 @@
         <p><font size="3">REGAL</font></p>
         <p><font size="3">Long length Dress with Tassels</font></p>
         <p><font size="3">Rs.2990</font></p>
+        <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
   </div>
+  <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+    
+    function addToCart(event) {
+        const button = event.target;
+        const product = button.parentElement.parentElement;
+        const name = product.dataset.name;
+        const price = parseFloat(product.dataset.price);
+        const image = product.dataset.image;
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price, image });
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
   </body>
 </html>

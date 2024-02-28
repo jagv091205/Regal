@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: #501045;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(60, 125, 185, 0.1);
+        }
+
+        .container h2 {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #2a1261;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5e86d1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Account Settings</h1>
+    </header>
+    <div class="container">
+        <h2>Edit Profile</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="johndoe">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="johndoe@example.com">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="********">
+            <button type="button" onclick="saveChanges()">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        function saveChanges() {
+            // Here you can add code to save changes to the backend
+            // For now, let's just show a confirmation prompt
+            var confirmation = confirm("Are you sure you want to save changes?");
+            if (confirmation) {
+                alert("Changes saved successfully!");
+            }
+        }
+    </script>
+</body>
+</html>
