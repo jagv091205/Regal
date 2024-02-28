@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            background-color: #4b0c3d;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        /* Profile section */
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-picture img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .profile-details h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile button {
+            background-color: #32175e;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .profile button:hover {
+            background-color: #6fabf0;
+        }
+
+        /* Orders section */
+        .orders {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(31, 17, 95, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .orders h2 {
+            margin-bottom: 1rem;
+        }
+
+        .orders ul {
+            list-style: none;
+        }
+
+        .orders li {
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .orders li:last-child {
+            border-bottom: none;
+        }
+
+        /* Saved addresses section */
+        .saved-addresses {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(14, 45, 112, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .saved-addresses h2 {
+            margin-bottom: 1rem;
+        }
+
+        /* Saved payment methods section */
+        .saved-payment-methods {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(14, 79, 122, 0.1);
+        }
+
+        .saved-payment-methods h2 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile-picture">
+                <img src="profile-picture.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2>John Doe</h2>
+                <p>Email: johndoe@example.com</p>
+                <p>Address: 123 Main St, City, Country</p>
+                <button onclick="window.location.href='account-settings.html';">Edit Profile</button>
+            </div>
+        </section>
+        <section class="orders">
+            <h2>Order History</h2>
+            <ul>
+                <li>
+                    <span>Order #12345</span>
+                    <span>$50.00</span>
+                    <span>Delivered</span>
+                </li>
+                <!-- More order items -->
+            </ul>
+        </section>
+        <section class="saved-addresses">
+            <h2>Saved Addresses</h2>
+            <ul>
+                <li>123 Main St, City, Country</li>
+                <!-- More saved addresses -->
+            </ul>
+        </section>
+        <section class="saved-payment-methods">
+            <h2>Saved Payment Methods</h2>
+            <ul>
+                <li>cash on delivery</li>
+                <!-- More saved payment methods -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Ecommerce Website</p>
+    </footer>
+</body>
+</html>
