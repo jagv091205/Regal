@@ -436,22 +436,25 @@
   </div>
   <script>
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    
+  
     addToCartButtons.forEach(button => {
-        button.addEventListener('click', addToCart);
-    });
-    
-    function addToCart(event) {
-        const button = event.target;
-        const product = button.parentElement.parentElement;
-        const name = product.dataset.name;
-        const price = parseFloat(product.dataset.price);
-        const image = product.dataset.image;
-        
+      button.addEventListener('click', () => {
+        const item = button.parentElement.parentElement;
+        const name = item.getAttribute('data-name');
+        const price = parseFloat(item.getAttribute('data-price'));
+        const image = item.getAttribute('data-image');
+  
+        const cartItem = {
+          name: name,
+          price: price,
+          image: image
+        };
+  
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({ name, price, image });
+        cart.push(cartItem);
         localStorage.setItem('cart', JSON.stringify(cart));
-    }
-    </script>
-  </body>
+        alert('Item added to cart!');
+      });
+    });
+  </script>
 </html>

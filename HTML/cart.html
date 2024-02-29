@@ -91,7 +91,7 @@
     <h2>Shopping Cart</h2>
     <div id="cart">
         <div id="cart-items"></div>
-        <p class="total">Total: $<span id="cart-total" class="total-price">0.00</span></p>
+        <p class="total">Total: ₹<span id="cart-total" class="total-price">0.00</span></p>
         <button class="checkout-btn" onclick="checkout()">Checkout</button>
     </div>
 </div>
@@ -125,7 +125,7 @@ function displayCartItems() {
 
         const itemPrice = document.createElement('div');
         itemPrice.classList.add('cart-item-price');
-        itemPrice.innerText = `$${item.price.toFixed(2)}`;
+        itemPrice.innerText = item.price ? `$${item.price.toFixed(2)}` : '$0.00'; // Check if price exists
         itemInfo.appendChild(itemPrice);
 
         const removeButton = document.createElement('button');
@@ -137,7 +137,9 @@ function displayCartItems() {
         cartItem.appendChild(itemInfo);
         cartItems.appendChild(cartItem);
 
-        total += item.price;
+        if (item.price) { // Only add to total if price exists
+            total += item.price;
+        }
     });
 
     cartTotal.innerText = total.toFixed(2);
