@@ -581,5 +581,29 @@
           <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
         </div>
     </div>
+
+    <script>
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement.parentElement;
+          const name = item.getAttribute('data-name');
+          const price = parseFloat(item.getAttribute('data-price'));
+          const image = item.getAttribute('data-image');
+    
+          const cartItem = {
+            name: name,
+            price: price,
+            image: image
+          };
+    
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(cartItem);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert('Item added to cart!');
+        });
+      });
+    </script>
   </body>
 </html>
