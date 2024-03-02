@@ -174,7 +174,7 @@
       }
 
       .add-to-bag {
-  background-color: #ff9900; /* Orange color */
+  background-color: #190b4b; /* Orange color */
   color: white;
   padding: 15px 30px; /* Adjust padding as needed */
   border: none;
@@ -187,33 +187,33 @@
       }
 
 .add-to-bag:hover {
-  background-color: #e68a00; /* Darker orange on hover */
+  background-color: #130e46; /* Darker orange on hover */
   transform: scale(1.05); /* Slight zoom on hover */
 }
 
       .set1 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(122, 210, 221);
       }
       .set2 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(115, 203, 230);
       }
       .set3 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(137, 205, 245);
       }
       .set4 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(135, 196, 231);
       }
       .set5 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(135, 185, 241);
       }
       .set6 img:hover{
         opacity: 0.9;
-        border: 5px solid red;
+        border: 5px solid rgb(129, 231, 235);
       }
 
       .language-dropdown {
@@ -262,10 +262,12 @@
         <input type="text" id="searchInput" placeholder="Search" />
       </div>
       <div class="action-buttons">
-        <button class="circle-button" id="cartbutton">🛒</button>
-        <!-- Replace with cart icon -->
-        <button class="circle-button" id="profileButton">👤</button>
-        <!-- Replace with profile icon -->
+        <button class="circle-button" id="cartButton">
+          <a href="cart.html">🛒</a>
+      </button> <!-- Replace with cart icon -->
+      <button class="circle-button" id="profileButton">
+          <a href="profile.html">👤</a>
+      </button> <!-- Replace with profile icon -->
       </div>
 
       <div class="language-dropdown">
@@ -579,5 +581,29 @@
           <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐⭐(5 out of 5 stars)</p>
         </div>
     </div>
+
+    <script>
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement.parentElement;
+          const name = item.getAttribute('data-name');
+          const price = parseFloat(item.getAttribute('data-price'));
+          const image = item.getAttribute('data-image');
+    
+          const cartItem = {
+            name: name,
+            price: price,
+            image: image
+          };
+    
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(cartItem);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert('Item added to cart!');
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Methods</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .payment-method {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .payment-method:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  .payment-method p {
+    font-size: 14px;
+    text-align: center;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  .checkout-btn {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  .checkout-btn:hover {
+    background-color: #e68a00;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Choose a Payment Method</h2>
+    <div class="payment-methods">
+        <div class="payment-method">
+            <input type="radio" id="credit_card" name="payment_method" value="credit_card">
+            <label for="credit_card">Credit or Debit Card</label>
+            <img src="../Images/card.jpg" alt="Credit Card">
+            <p>Pay securely using your credit or debit card.</p>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="paypal" name="payment_method" value="paypal">
+            <label for="paypal">PayPal</label>
+            <img src="../Images/paypal.jpg" alt="paypal">
+            <p>Pay with your PayPal account.</p>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="cash_on_delivery" name="payment_method" value="cash_on_delivery">
+            <label for="cash_on_delivery">Cash on Delivery</label>
+            <img src="../Images/cash.jpg" alt="cash on delivery">
+            <p>Pay with cash upon delivery.</p>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="paytm" name="payment_method" value="paytm">
+            <label for="paytm">Paytm</label>
+            <img src="../Images/paytm1.png" alt="paytm">
+            <p>Pay using Paytm.</p>
+        </div>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">Proceed to Payment</button>
+</div>
+
+<script>
+function checkout() {
+    const selectedMethod = document.querySelector('input[name="payment_method"]:checked');
+    if (selectedMethod) {
+        const method = selectedMethod.value;
+        switch (method) {
+            case 'credit_card':
+                window.location.href = 'credit_card_details.html';
+                break;
+            case 'paypal':
+                window.location.href = 'paypal_details.html';
+                break;
+            case 'paytm':
+                window.location.href = 'paytm_details.html';
+                break;
+            default:
+                // For cash on delivery, no redirection is needed
+                alert('Proceeding with Cash on Delivery.');
+                break;
+        }
+    } else {
+        alert('Please select a payment method.');
+    }
+}
+</script>
+</body>
+</html>

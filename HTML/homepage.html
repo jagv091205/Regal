@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Website</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 
@@ -85,13 +86,16 @@
             align-items: center;
             justify-content: center;
             outline: none;
+            padding: 2px;
+            margin-left: 1%;
         }
         
 
         .language-dropdown {
             position: relative;
-            margin-right: 20px;
+            margin-right: 40px; /* Increase the margin-right to add more space */
         }
+        
 
         .language-dropdown-content {
             display: none;
@@ -532,21 +536,76 @@
             color: #ff0000; /* Change color for liked/disliked buttons */
         }
 
+        
+        .hover-effect:hover {
+            transform: scale(1.05); /* Scale the element by 5% */
+            transition: transform 0.3s ease; /* Smooth transition over 0.3 seconds with ease timing function */
+        }
 
+        /* CSS for modal dialog */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scrolling */
+            background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* Centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px; /* Set maximum width */
+            border-radius: 10px;
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .payment-methods {
+            margin-top: 20px;
+        }
+        
+        .payment-methods img {
+            height: 50px;
+            margin: 0 10px;
+        }
 
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="..\Images\logo.png" alt="Logo">
+            <img class="hover-effect" src="..\Images\logo.png" alt="Logo">
         </div>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search">
         </div>
         <div class="action-buttons">
-            <button class="circle-button" id="cartButton">🛒</button> <!-- Replace with cart icon -->
-            <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+            <button class="circle-button" id="cartButton">
+                <a href="cart.html">🛒</a>
+            </button> <!-- Replace with cart icon -->
+            <button class="circle-button" id="profileButton">
+                <a href="profile.html">👤</a>
+            </button> <!-- Replace with profile icon -->
         </div>
 
         <div class="language-dropdown">
@@ -574,16 +633,21 @@
         <a href="Category.html">Categories</a>
         <a href="About.html">About</a>
     </div>
-    <div class="clothing-collection">
-        <div class="collection-images">
-            <img src="..\Images\display.png" alt="Collection Image 1"> 
-            <img src="..\Images\image1.jpg" alt="Collection Image 1"> 
-            <img src="..\Images\image2.jpg" alt="Collection Image 2">
-            <img src="..\Images\image7.jpg" alt="Collection Image 3">
-            <img src="..\Images\image3.jpg" alt="Collection Image 4"> 
-            <img src="..\Images\image4.jpg" alt="Collection Image 5">
-            <img src="..\Images\image5.jpg" alt="Collection Image 6">
-            <img src="..\Images\image6.jpg" alt="Collection Image 7">
+
+    <marquee behavior="scroll" direction="left" style="color: black; font-family: 'Merriweather', serif; font-size: 20px; background-color: rgba(255, 255, 255, 0.858); padding: 1px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        Shipping Worldwide
+    </marquee>
+    
+           
+    <div class="collection-images">
+            <img class="hover-effect" src="..\Images\display.png" alt="Collection Image 1"> 
+            <img class="hover-effect" src="..\Images\image1.jpg" alt="Collection Image 1"> 
+            <img class="hover-effect" src="..\Images\image2.jpg" alt="Collection Image 2">
+            <img class="hover-effect" src="..\Images\image7.jpg" alt="Collection Image 3">
+            <img class="hover-effect" src="..\Images\image3.jpg" alt="Collection Image 4"> 
+            <img class="hover-effect" src="..\Images\image4.jpg" alt="Collection Image 5">
+            <img class="hover-effect" src="..\Images\image5.jpg" alt="Collection Image 6">
+            <img class="hover-effect" src="..\Images\image6.jpg" alt="Collection Image 7">
             
         </div>
         <span class="prev" onclick="prevSlide()">&#10094;</span>
@@ -591,15 +655,15 @@
     </div>
     <div class="button-images">
         <a href="link1.html">
-            <img src="..\Images\women.png" alt="Women">
+            <img class="hover-effect" src="..\Images\women.png" alt="Women">
             <span>Women</span>
         </a>
         <a href="link2.html">
-            <img src="..\Images\accessories.png" alt="Accessories">
+            <img class="hover-effect" src="..\Images\accessories.png" alt="Accessories">
             <span>Accessories</span>
         </a>
         <a href="link3.html">
-            <img src="..\Images\men.jpg" alt="Men">
+            <img class="hover-effect" src="..\Images\men.jpg" alt="Men">
             <span>Men</span>
         </a>
     </div>
@@ -608,8 +672,8 @@
         <a href="link1.html">
             <h2 style="text-align: left; color: black;">InFocus: Dress</h2>
             <div class="infocus-images">
-                <img src="..\Images\dress.jpg" alt="Infocus Button Image" style="width: 560px;">
-                <video width="1000px" height="auto" loop autoplay muted>
+                <img class="hover-effect" src="..\Images\dress.jpg" alt="Infocus Button Image" style="width: 560px;">
+                <video class="hover-effect"  width="1000px" height="auto" loop autoplay muted>
                     <source src="..\Images\Videos\vidimg1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -619,11 +683,11 @@
     
     
     <div class="button-images1">
-        <a href="HTML\link1.html">
+        <a href="link3.html">
             <h2 style="text-align: left; color: black;"> InFocus: T-shirts</h4>
             <div class="infocus-images">
-                <img src="..\Images\man.jpg" alt="Infocus Button Image">
-                <video width="1000" height="auto" autoplay loop muted>
+                <img class="hover-effect" src="..\Images\man.jpg" alt="Infocus Button Image">
+                <video class="hover-effect"  width="1000" height="auto" autoplay loop muted>
                     <source src="..\Images\Videos\vidimg2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -631,11 +695,11 @@
         </a>
         </div>
         <div class="button-images1">
-        <a href="HTML\link2.html">
+        <a href="link2.html">
             <h2 style="text-align: left; color: black;">InFocus: Accessories</h4>
             <div class="infocus-images">
-                <img src="..\Images\accr.jpg" alt="Infocus Button Image">
-                <video width="1000" height="auto" loop autoplay muted>
+                <img class="hover-effect" src="..\Images\accr.jpg" alt="Infocus Button Image">
+                <video class="hover-effect"  width="1000" height="auto" loop autoplay muted>
                     <source src="..\Images\Videos\vidimg3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -650,8 +714,16 @@
             <h2>Subscribe to Our Newsletter!</h2>
             <form id="newsletterForm" action="#" method="post">
                 <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
+                <button type="submit" id="subscribeButton">Subscribe</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal dialog -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>You have successfully subscribed!</p>
         </div>
     </div>
 
@@ -680,35 +752,35 @@
         <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Current Offers</h2>
         <div class="offer-slider">
             <div class="offer-slide">
-                <img src="..\Images\offer1.jpg" alt="Offer 1">
+                <img class="hover-effect" src="..\Images\offer1.jpg" alt="Offer 1">
                 <p style="font-size: 16px; font-weight: bold;">Get 20% off on all women's dresses</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer2.jpg" alt="Offer 2">
+                <img class="hover-effect" src="..\Images\offer2.jpg" alt="Offer 2">
                 <p style="font-size: 16px; font-weight: bold;">Limited time offer: 30% off on these men's shirt</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer3.jpg" alt="Offer 3">
+                <img class="hover-effect" src="..\Images\offer3.jpg" alt="Offer 3">
                 <p style="font-size: 16px; font-weight: bold;">Buy one, get one free on all accessories</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer4.jpg" alt="Offer 1">
+                <img class="hover-effect" src="..\Images\offer4.jpg" alt="Offer 1">
                 <p style="font-size: 16px; font-weight: bold;">30%off to the first 100 customers!</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer5.jpg" alt="Offer 2">
+                <img class="hover-effect" src="..\Images\offer5.jpg" alt="Offer 2">
                 <p style="font-size: 16px; font-weight: bold;">Buy this grey sweatshirt and get a free shiping!</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer6.jpg" alt="Offer 3">
+                <img class="hover-effect" src="..\Images\offer6.jpg" alt="Offer 3">
                 <p style="font-size: 16px; font-weight: bold;">Limited Edition wallet with a 10% discount!</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer7.jpg" alt="Offer 3">
+                <img class="hover-effect" src="..\Images\offer7.jpg" alt="Offer 3">
                 <p style="font-size: 16px; font-weight: bold;">Buy one get one free!</p>
             </div>
             <div class="offer-slide">
-                <img src="..\Images\offer8.jpg" alt="Offer 3">
+                <img class="hover-effect" src="..\Images\offer8.jpg" alt="Offer 3">
                 <p style="font-size: 16px; font-weight: bold;">Back in Stock! Hurry and get a 25% discount! </p>
             </div>
             <!-- Add more offer slides as needed -->
@@ -720,7 +792,7 @@
         <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Fashion Feed</h2>
         <!-- First post -->
         <div class="post">
-            <img src="..\Images\outfit1.jpg" alt="Outfit 1">
+            <img class="hover-effect" src="..\Images\outfit1.jpg" alt="Outfit 1">
             <div class="interaction-buttons">
                 <!-- Like button -->
                 <button class="like-button">❤️</button>
@@ -734,7 +806,7 @@
         </div>
         <!-- Second post -->
         <div class="post">
-            <img src="..\Images\outfit2.jpg" alt="Outfit 2">
+            <img class="hover-effect" src="..\Images\outfit2.jpg" alt="Outfit 2">
             <div class="interaction-buttons">
                 <!-- Like button -->
                 <button class="like-button">❤️</button>
@@ -747,7 +819,7 @@
             </div>
         </div>
         <div class="post">
-            <img src="..\Images\outfit3.jpg" alt="Outfit 2">
+            <img class="hover-effect" src="..\Images\outfit3.jpg" alt="Outfit 2">
             <div class="interaction-buttons">
                 <!-- Like button -->
                 <button class="like-button">❤️</button>
@@ -760,7 +832,7 @@
             </div>
         </div>
         <div class="post">
-            <img src="..\Images\outfit4.jpg" alt="Outfit 2">
+            <img class="hover-effect" src="..\Images\outfit4.jpg" alt="Outfit 2">
             <div class="interaction-buttons">
                 <!-- Like button -->
                 <button class="like-button">❤️</button>
@@ -791,7 +863,7 @@
         </ul>
         <div class="subscription-footer">
             <p>Join now for just <span>$9.99/month</span> and elevate your shopping experience!</p>
-            <button>Join Prime</button>
+            <button onclick="redirectToCardDetails()">Join Prime</button>
         </div>
     </div>
    
@@ -855,7 +927,11 @@
             });
         });
         
-
+ // Function to redirect to card details page
+ function redirectToCardDetails() {
+    // Redirect the user to the card details page
+    window.location.href = "card_details.html"; // Change the URL to your actual card details page
+}
 document.querySelectorAll('.share-button').forEach(button => {
     button.addEventListener('click', () => {
         // Handle share functionality
@@ -885,6 +961,25 @@ function changelayout() {
 }
 
 
+  // Add an event listener to the form submission
+   function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+// Function to close modal dialog
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+// Add an event listener to the subscribe button
+document.getElementById("subscribeButton").addEventListener("click", function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Show modal dialog with success message
+    openModal();
+});
+
     </script>
     <br>
     <br>
@@ -905,31 +1000,56 @@ function changelayout() {
         <div>
             <p>&copy; 2023 Regal Clothing Website</p>
             <p>
-                <a href="HTML\TOS.html">Terms of Service</a> |
-                <a href="HTML\ProP.html">Privacy Policy</a> |
-                <a href="HTML\refund.html">Refund Policy</a> |
-                <a href="HTML\imprint.html">Imprint</a> |
-                <a href="HTML\Cookie.html">Cookie Settings</a> |
-                <a href="HTML\Contactc.html">Contact Us</a> |
-                <a href="HTML\About.html">About Us</a>
+                <a href="TOS.html">Terms of Service</a> |
+                <a href="ProP.html">Privacy Policy</a> |
+                <a href="refund.html">Refund Policy</a> |
+                <a href="imprint.html">Imprint</a> |
+                <a href="Cookie.html">Cookie Settings</a> |
+                <a href="Contactc.html">Contact Us</a> |
+                <a href="About.html">About Us</a>
             </p>
         </div>
         <br>
-        
-            <br>
-            <br>
-            <br>
-            <br>
-            <div>
-                <p>Follow us!</p>
-                <a href="#"><img src="..\Images\reddit.png" alt="Reddit Icon"></a>
-                <a href="#"><img src="..Images\instagarm.png" alt="Instagram Icon"></a>
-                <a href="#"><img src="..Images\twitter.png" alt="Twitter Icon"></a>
-                <a href="#"><img src="..Images\discord.png" alt="Discord Icon"></a>
-                <!-- Add more social media icons and links as needed -->
-            </div>
+        <div>
+            <p>Follow us!</p>
+            <a href="#"><img class="hover-effect" src="..\Images\reddit.png" alt="Reddit Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\instagarm.png" alt="Instagram Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\twitter.png" alt="Twitter Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\discord.png" alt="Discord Icon"></a>
+            <!-- Add more social media icons and links as needed -->
+        </div>
+        <br>
+        <div>
+            <p>Subscribe to our newsletter</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <br>
+        <div>
+            <p>Download our app</p>
+            <a href="#"><img src="..\Images\appstore.png" alt="App Store Badge" style="width: 25px;"></a>
+        <a href="#"><img src="..\Images\googleplay.png" alt="Google Play Badge" style="width: 25px;"></a>
+        </div>
+        <br>
+        <div>
+            <p>Get help</p>
+            <a href="#">FAQs</a> |
+            <a href="#">Customer Support</a> |
+            <a href="#">Shipping Info</a> |
+            <a href="#">Returns & Exchanges</a>
+        </div>
+
+        <div class="payment-methods">
+            <img src="..\Images\visa.png" alt="Visa" style="width: 32px;">
+            <img src="..\Images\amex.png" alt="American Express" style="width: 32px;">
+            <img src="..\Images\bhim.png" alt="BHIM" style="width: 32px;">
+            <img src="..\Images\rupay.png" alt="RuPay" style="width: 35px;">
+            <img src="..\Images\paytm1.png" alt="Paytm" style="width: 38px;">
         </div>
     </footer>
+    
     
     
 </body>
