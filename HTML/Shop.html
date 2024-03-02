@@ -1,102 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-      }
-      .header {
-        background-color: #1726faa0;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
-      .product {
-        display: flex;
-        margin-bottom: 20px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      .product-image {
-        flex: 1;
-        max-width: 200px;
-        margin-right: 20px;
-      }
-      .product-details {
-        flex: 2;
-        margin-left: 25px;
-      }
-      .product-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-      }
-      .product-description {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
-      }
-      .product-price {
-        font-size: 18px;
-        font-weight: bold;
-        color: hwb(211 1% 86%);
-        margin-bottom: 10px;
-      }
-      .product-button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <h1>Shop Our Collection</h1>
-    </div>
-    <div class="container">
-      <div class="product">
-        <div class="product-image">
-          <img src="../Images/female.jpg" alt="Women Two piece set" />
-        </div>
-        <div class="product-details">
-          <h2 class="product-title">Two-Piece Dress</h2>
-          <p class="product-description">Old Money aesthetic two piece set.</p>
-          <p class="product-price">$20</p>
-          <button class="product-button">Add to Cart</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('../Images/Shop\ Bg.PNG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .header {
+      background-color: #ff6f61;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-title {
+      margin: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .product-description {
+      margin-top: 10px;
+      color: #666;
+    }
+
+    .product-price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .product-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .product-button:hover {
+      background-color: #e65c4e;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Shop Our Collection</h1>
+  </div>
+  <div class="container">
+    <div class="product">
+      <div class="product-image">
+        <img src="../Images/female.jpg" alt="Women Two piece set" />
       </div>
-      <div class="product">
-        <div class="product-image">
-          <img src="../Images/male.png" alt="Mens shirt" />
-        </div>
-        <div class="product-details">
-          <h2 class="product-title">Pale Blue Shirt</h2>
-          <p class="product-description">Beachy Pale Blue shirt for men.</p>
-          <p class="product-price">$15</p>
-          <button class="product-button">Add to Cart</button>
-        </div>
+      <div class="product-details">
+        <h2 class="product-title">Two-Piece Dress</h2>
+        <p class="product-description">Old Money aesthetic two piece set.</p>
+        <p class="product-price">$20</p>
+        <button class="product-button">Add to Cart</button>
       </div>
-      <!-- Add more products here -->
     </div>
-  </body>
+    <div class="product">
+      <div class="product-image">
+        <img src="../Images/male.png" alt="Mens shirt" />
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Pale Blue Shirt</h2>
+        <p class="product-description">Beachy Pale Blue shirt for men.</p>
+        <p class="product-price">$15</p>
+        <button class="product-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product"> <!-- Accessories -->
+      <div class="product-image">
+        <img src="../Images/Shop p3.PNG" alt="Accessory" />
+      </div>
+      <div class="product-details" style="padding-top: 185px;">
+        <h2 class="product-title">Stylish Bracelet</h2>
+        <p class="product-description">Trendy bracelet to accessorize your outfit.</p>
+        <p class="product-price">$10</p>
+        <button class="product-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product"> <!-- Another Accessory -->
+      <div class="product-image"">
+        <img src="../Images/Shop p4.PNG" alt="Earrings" />
+      </div>
+      <div class="product-details" style="padding-top: 185px;">
+        <h2 class="product-title">Crystal Drop Earrings</h2>
+        <p class="product-description">Elegant crystal drop earrings for a touch of glamour.</p>
+        <p class="product-price">$12</p>
+        <button class="product-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

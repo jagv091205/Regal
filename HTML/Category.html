@@ -1,107 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Category</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-      }
-      .header {
-        background-color: #007bff;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
-      .category {
-        display: flex;
-        margin-bottom: 20px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      .category-image {
-        flex: 1;
-        max-width: 200px;
-        margin-right: 20px;
-      }
-      .category-details {
-        flex: 2;
-        margin-left: 55px;
-        line-height: 25px;
-      }
-      .category-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-      }
-      .category-description {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
-      }
-      .category-link {
-        text-decoration: none;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <h1>Shop by Category</h1>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Category</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.category {
+  display: flex;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.category-image {
+  flex: 1;
+  max-width: 200px;
+  margin-right: 20px;
+}
+.category-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.category-details {
+  flex: 2;
+}
+.category-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.category-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.category-link {
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Add display property for animation */
+}
+.category-link:hover {
+  background-color: #0056b3;
+}
+</style>
+<!-- Add jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="header">
+  <h1>Shop by Category</h1>
+</div>
+<div class="container" id="categories-container">
+  <div class="category">
+    <div class="category-image">
+      <img src="../Images/women.png" alt="Category 1" />
     </div>
-    <div class="container">
-      <div class="category">
-        <div class="category-image">
-          <img src="../Images/women.png" alt="Category 1" />
-        </div>
-        <div class="category-details">
-          <h2 class="category-title">Women</h2>
-          <p class="category-description">Shop our latest women collection.</p>
-          <a href="link1.html" class="category-link">Explore</a>
-        </div>
-      </div>
-      <div class="category">
-        <div class="category-image">
-          <img src="../Images/men.png" alt="Category 2" />
-        </div>
-        <div class="category-details">
-          <h2 class="category-title">Men</h2>
-          <p class="category-description">Shop our latest male collection.</p>
-          <a href="link3.html" class="category-link">Explore</a>
-        </div>
-      </div>
-
-      <div class="category">
-        <div class="category-image">
-          <img src="../Images/accesories.png" alt="Category 3" />
-        </div>
-        <div class="category-details">
-          <h2 class="category-title">Accessories</h2>
-          <p class="category-description">
-            Style your outfits with out latest accesories.
-          </p>
-          <a href="link2.html" class="category-link">Explore</a>
-        </div>
-      </div>
-      <!-- Add more categories here -->
+    <div class="category-details">
+      <h2 class="category-title">Women</h2>
+      <p class="category-description">Shop our latest women collection.</p>
+      <a href="link1.html" class="category-link">Explore</a>
     </div>
-  </body>
+  </div>
+  <div class="category">
+    <div class="category-image">
+      <img src="../Images/men.png" alt="Category 2" />
+    </div>
+    <div class="category-details">
+      <h2 class="category-title">Men</h2>
+      <p class="category-description">Shop our latest male collection.</p>
+      <a href="link3.html" class="category-link">Explore</a>
+    </div>
+  </div>
+  <div class="category">
+    <div class="category-image">
+      <img src="../Images/accessories.png" alt="Category 3" />
+    </div>
+    <div class="category-details">
+      <h2 class="category-title">Accessories</h2>
+      <p class="category-description">
+        Style your outfits with our latest accessories.
+      </p>
+      <a href="link2.html" class="category-link">Explore</a>
+    </div>
+  </div>
+  <!-- Add more categories here -->
+</div>
+<script>
+$(document).ready(function(){
+  // Add fade in effect when hovering over category containers
+  $(".category").hover(function(){
+    $(this).fadeIn();
+  });
+  
+  // Add slide in effect for "Explore" links
+  $(".category-link").hover(function(){
+    $(this).stop().animate({marginTop: "-5px"}, 300);
+  }, function(){
+    $(this).stop().animate({marginTop: "0"}, 300);
+  });
+});
+</script>
+</body>
 </html>

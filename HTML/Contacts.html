@@ -7,21 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-image: url('../Images/Contact\ Bg.PNG');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
         }
         .contact-container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Added background color with opacity */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .contact-form input,
         .contact-form textarea {
-            width: 100%;
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #007BFF;
         }
         .contact-form button {
             background-color: #007BFF;
@@ -31,12 +43,17 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
         .contact-info {
             max-width: 600px;
             margin: 20px auto;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Added background color with opacity */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -44,7 +61,7 @@
     <div class="contact-container">
         <h2>Contact Us</h2>
         <p>Please fill out the form below to get in touch with us.</p>
-        <form class="contact-form" action="process_form.php" method="post">
+        <form class="contact-form" action="#" method="post" onsubmit="return validateForm()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -72,5 +89,23 @@
         <p>Email: <a href="mailto:customerqueries@regal.com">customerqueries@regal.com</a></p>
         <p>Customer Care Number: 1231239 / 58624</p>
     </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var dob = document.getElementById('dob').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var query = document.getElementById('query').value;
+
+            if (name == "" || address == "" || dob == "" || email == "" || phone == "" || query == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>

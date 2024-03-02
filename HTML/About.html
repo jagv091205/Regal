@@ -10,35 +10,73 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            background-image: url('../Images/About\ bg.PNG');
+            background-size: cover;
+            background-position: center;
         }
         .about-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .about-container:hover {
+            transform: translateY(-5px);
         }
         .about-section {
             padding: 20px;
             text-align: center;
+            background-color: #87b0de;
+            background-image: url('../Images/About\ bg2.PNG');
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px; /* If you want border-radius for the background */
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Move down to animate */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            animation: pulse 2s infinite alternate; /* Animation loop */
+        }
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        .about-section.show {
+            opacity: 1; /* Show */
+            transform: translateY(0); /* Move to original position */
         }
         .about-section h2 {
             font-size: 24px;
-            color: #333;
+            color: #333333;
         }
         .about-section p {
             font-size: 16px;
-            color: #666;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
         .social-media-icons {
             margin-top: 20px;
         }
-        .social-media-icons a {
-            font-size: 24px;
+        .social-media-icons img {
+            width: 24px;
             margin: 0 10px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        .social-media-icons a {
             text-decoration: none;
             color: #007BFF;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-media-icons a:hover img {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -46,18 +84,41 @@
     <div class="about-container">
         <div class="about-section">
             <h2>About Us</h2>
-            <p>Welcome to our cloth selling website! We are passionate about providing you with the latest and trendiest fashion options. Our goal is to make you look and feel your best, whether it's for a special occasion or your everyday style.</p>
+            <p>Welcome to our clothing selling website! We are passionate about providing you with the latest and trendiest fashion options. Our goal is to make you look and feel your best, whether it's for a special occasion or your everyday style.</p>
             <p>With a wide range of clothing options for all ages and genders, we strive to offer quality products at affordable prices. Our team of fashion experts constantly curates the latest styles and trends to ensure you have access to the best fashion choices.</p>
             <p>Thank you for choosing us as your fashion destination. We look forward to serving you and helping you express your unique style through our collection of clothing and accessories.</p>
             
             <div class="social-media-icons">
-                <!-- Add your social media links with emojis here -->
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Twitter">🐦</a>
-                <a href="#" title="Instagram">📸</a>
-                <a href="#" title="LinkedIn">🔗</a>
+                <!-- Replace emoji with real logos -->
+                <a href="#" title="Facebook"><img src="../Images/FacebookL.PNG" alt="Facebook"></a>
+                <a href="#" title="Twitter"><img src="../Images/TwitterL.PNG" alt="Twitter"></a>
+                <a href="#" title="Instagram"><img src="../Images/InstagramL.PNG" alt="Instagram"></a>
+                <a href="#" title="LinkedIn"><img src="../Images/LinkedinL.PNG" alt="LinkedIn"></a>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // jQuery for smooth scrolling
+        $('a').on('click', function(event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        // Animate the appearance of the about section
+        $(document).ready(function() {
+            $('.about-section').addClass('show');
+        });
+    </script>
 </body>
 </html>

@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>My Blog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('../Images/Blog\ Bg.PNG'); /* Add your background image URL here */
+            background-size: cover;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         .header {
-            background-color: #007BFF;
+            background: linear-gradient(to right, #007BFF, #00BFFF); /* Gradient background */
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            margin-bottom: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* Text shadow */
+            animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+            border-radius: 20px;
+}
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         }
         .blog-post {
             margin-bottom: 40px;
@@ -31,46 +40,91 @@
             border-bottom: 1px solid #ccc;
         }
         .blog-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         .blog-meta {
             font-size: 14px;
             color: #666;
+            margin-bottom: 5px;
         }
         .blog-content {
             font-size: 16px;
-            color: #333;
+            line-height: 1.6;
+        }
+        /* Style for JavaScript button */
+        .read-more-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1>My Blog</h1>
     </div>
     <div class="container">
         <div class="blog-post">
-            <h2 class="blog-title"> Blog Post 1</h2>
+            <h2 class="blog-title">Shopping: A Therapy for the Soul</h2>
             <p class="blog-meta">Posted on September 20, 2023 by John Doe</p>
             <p class="blog-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod lacus in lacinia tincidunt.
-                Vivamus at libero eu justo blandit fringilla sed a arcu. In hac habitasse platea dictumst. Sed in justo sed odio vestibulum cursus. 
-                Suspendisse potenti. Sed efficitur, ligula id bibendum gravida, est dolor luctus tellus, a aliquet arcu justo in est. 
-                Aliquam aliquam orci eu arcu dapibus vestibulum.
+                Shopping is more than just acquiring goods; it's an experience that touches the soul. The thrill of finding the perfect outfit, the satisfaction of scoring a great deal, and the joy of treating oneself to something special—all contribute to the allure of shopping.
+                Whether strolling through bustling city streets or browsing online from the comfort of home, shopping offers a respite from the mundane routines of daily life. It provides an opportunity to explore new trends, express individual style, and indulge in moments of self-care.
+                Moreover, shopping can foster connections with others. Whether it's bonding with friends over a shared love for fashion or seeking advice from knowledgeable sales associates, shopping experiences often bring people together, creating memories that last a lifetime.
+                However, it's essential to approach shopping mindfully. While it can lift spirits and provide temporary relief, excessive or impulsive shopping can lead to financial strain and clutter. Therefore, striking a balance between indulgence and restraint is key to enjoying the therapeutic benefits of shopping.
+                In conclusion, shopping is more than just a transaction; it's a journey of self-discovery, connection, and rejuvenation. So next time you're feeling stressed or in need of a pick-me-up, consider embarking on a shopping excursion—it may just be the therapy your soul craves.
             </p>
+            <!-- JavaScript button to toggle visibility of content -->
+            <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
         </div>
         <div class="blog-post">
-            <h2 class="blog-title"> Blog Post 2</h2>
-            <p class="blog-meta">Posted on September 18, 2023 by Jane Smith</p>
+            <h2 class="blog-title">The Art of Thrift Shopping</h2>
+            <p class="blog-meta">Posted on February 29, 2024 by ChatGPT</p>
             <p class="blog-content">
-                Sed vehicula, lectus eget elementum mattis, purus lectus fringilla odio, id vestibulum orci justo nec quam. 
-                Fusce et ullamcorper dolor, id mattis elit. Vivamus ut ligula non ex gravida malesuada eget eget nisi.
-                Sed fringilla, tortor quis tincidunt scelerisque, neque nisi efficitur arcu, quis malesuada tortor est at turpis.
+                Thrift shopping, often overlooked, is an art form in itself. It's a treasure hunt where one man's trash becomes another's treasure. The thrill of finding unique items at bargain prices is unmatched.
+                Unlike traditional retail, thrift stores offer a diverse range of items, from vintage clothing to retro home decor. Each visit is a new adventure, filled with unexpected discoveries and hidden gems.
+                Thrift shopping is also environmentally friendly. By giving pre-loved items a second life, it reduces waste and promotes sustainability. It's a win-win situation for both the shopper and the planet.
+                Moreover, thrift shopping is budget-friendly. With careful browsing and a bit of luck, you can revamp your wardrobe or decorate your home without breaking the bank. It's all about savvy shopping and creative styling.
+                In conclusion, thrift shopping is more than just a cost-effective way to shop—it's a lifestyle choice. It celebrates individuality, creativity, and sustainability. So next time you're in need of retail therapy, consider embarking on a thrift shopping adventure—you never know what treasures you might find.
             </p>
+            <!-- JavaScript button to toggle visibility of content -->
+            <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
         </div>
-        <!-- Add more blog posts here -->
     </div>
+
+    <script>
+        // JavaScript function to toggle visibility of content
+        function toggleContent(button) {
+            var content = button.previousElementSibling;
+            content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+            button.textContent = (button.textContent === 'Read More') ? 'Read Less' : 'Read More';
+        }
+
+    </script>
 </body>
 </html>
