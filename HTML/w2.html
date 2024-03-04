@@ -185,8 +185,14 @@
         <input type="text" id="searchInput" placeholder="Search">
     </div>
     <div class="action-buttons">
-        <button class="circle-button" id="cartButton">🛒</button> <!-- Replace with cart icon -->
-        <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+        <button class="circle-button" id="cartbutton">
+            <a href="cart.html">🛒</a>
+          </button>
+          <!-- Replace with cart icon -->
+          <button class="circle-button" id="profileButton">
+            <a href="profile.html">👤</a>
+          </button>
+          <!-- Replace with profile icon -->
     </div>
 
     <div class="language-dropdown">
@@ -214,7 +220,7 @@
     <a href="About.html">About</a>
 </div>
 
-<section id="prodetails" class="section-p1">
+<section id="prodetails" class="section-p1" data-name="Frindged Textured blouse Top" data-price="900.00" data-image="../Images/w2.png">
     <div class="single-pro-details">
         <img src="../Images/w2.png" width="100%" id="MainImg" alt="Product Image" onclick="openImage()">
         <button class="slider-button" onclick="nextImage()"> > </button>
@@ -272,6 +278,28 @@
     function addtobag(){
         alert("Product added to the Bag!");
     }
+    /*Shopping cart js code*/
+    const addToCartButtons = document.querySelectorAll(".add-to-bag");
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement.parentElement;
+        const name = item.getAttribute("data-name");
+        const price = parseFloat(item.getAttribute("data-price"));
+        const image = item.getAttribute("data-image");
+
+        const cartItem = {
+          name: name,
+          price: price,
+          image: image,
+        };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(cartItem);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        
+      });
+    });
 </script>
 </body>
 </html>
