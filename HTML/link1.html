@@ -78,58 +78,55 @@
       }
 
       .navigation a:hover {
-  background-color: #50abcf; /* Adjust to your desired hover background color */
-  color: #000; /* Adjust to your desired hover text color */
-}
-
-
-.add-to-bag {
-  background-color: #270d58; /* Orange color */
-  color: white;
-  padding: 15px 30px; /* Adjust padding as needed */
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 10px; /* More rounded corners */
-  box-shadow: 0 3px 6px rgba(144, 141, 141, 0.2); /* Subtle shadow */
-  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
-  width: 250px;
+        background-color: #50abcf; /* Adjust to your desired hover background color */
+        color: #000; /* Adjust to your desired hover text color */
       }
 
-.add-to-bag:hover {
-  background-color: #4e4e52; /* Darker orange on hover */
-  transform: scale(1.05); /* Slight zoom on hover */
-}
+      .add-to-bag {
+        background-color: #270d58; /* Orange color */
+        color: white;
+        padding: 15px 30px; /* Adjust padding as needed */
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px; /* More rounded corners */
+        box-shadow: 0 3px 6px rgba(144, 141, 141, 0.2); /* Subtle shadow */
+        transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+        width: 250px;
+      }
 
+      .add-to-bag:hover {
+        background-color: #4e4e52; /* Darker orange on hover */
+        transform: scale(1.05); /* Slight zoom on hover */
+      }
 
-      .catalog-items{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            font-size:3;
-            text-align: center;
-            border:1px solid #cce7d0;
-            row-gap:2%;
-            }
+      .catalog-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: 3;
+        text-align: center;
+        border: 1px solid #cce7d0;
+        row-gap: 2%;
+      }
 
-        .catalog-items img{
-            width: 24%;
-            height: 400px;
-            row-gap: 5%;
-            width:100%;
-            display:flex;
-            padding-left: 30px;
-            transition: all 0.2s ease-in-out;
-        }
+      .catalog-items img {
+        width: 24%;
+        height: 400px;
+        row-gap: 5%;
+        width: 100%;
+        display: flex;
+        padding-left: 30px;
+        transition: all 0.2s ease-in-out;
+      }
 
-        .title{
-            margin-bottom:10px;
-        }
+      .title {
+        margin-bottom: 10px;
+      }
 
-        .catalog-items img:hover{
+      .catalog-items img:hover {
         opacity: 0.9;
         transform: scale(1.05);
       }
-
     </style>
   </head>
   <body>
@@ -141,9 +138,13 @@
         <input type="text" id="searchInput" placeholder="Search" />
       </div>
       <div class="action-buttons">
-        <button class="circle-button" id="cartbutton">🛒</button>
+        <button class="circle-button" id="cartbutton">
+          <a href="cart.html">🛒</a>
+        </button>
         <!-- Replace with cart icon -->
-        <button class="circle-button" id="profileButton">👤</button>
+        <button class="circle-button" id="profileButton">
+          <a href="profile.html">👤</a>
+        </button>
         <!-- Replace with profile icon -->
       </div>
     </header>
@@ -156,402 +157,815 @@
       <a href="Category.html">Categories</a>
       <a href="About.html">About</a>
     </div>
-<br><br>
+    <br /><br />
     <div class="catalog-items">
-
-      <div class="items" data-name="Fringed Textured Top" data-price="750.00" data-image="../Images/w1.png" onclick="window.location.href='w1.html';">
-         <img src="../Images/w1.png" />
-         <div class="title">
-             <h4>REGAL</h4>
-             <p><font size="4">Fringed Textured Top</font></p>
-             <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-              <span style="text-decoration: line-through;">Rs.1500</span>
-              <span style="color: #f1c40f;">Rs.750</span> (30% off)
-            </p>
-            <button class="add-to-bag">Add to Bag &#128092;</button>
-         <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
-             </div>
+      <div
+        class="items"
+        data-name="Fringed Textured Top"
+        data-price="750.00"
+        data-image="../Images/w1.png"
+      >
+        <img src="../Images/w1.png" />
+        <div class="title">
+          <h4>REGAL</h4>
+          <p><font size="4">Fringed Textured Top</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1500</span>
+            <span style="color: #f1c40f">Rs.750</span> (30% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
         </div>
+      </div>
 
-      <div class="items" data-name="Frindged Textured blouse Top" data-price="900.00" data-image="../Images/w2.png" onclick="window.location.href='w1.html';">
+      <div
+        class="items"
+        data-name="Frindged Textured blouse Top"
+        data-price="900.00"
+        data-image="../Images/w2.png"
+      >
         <img src="../Images/w2.png" />
         <div class="title">
-            <h4>REGAL</h4>
-            <p><font size="4">Frindged Textured blouse Top</font></p>
-            <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-              <span style="text-decoration: line-through;">Rs.2000</span>
-              <span style="color: #f1c40f;">Rs.900</span> (50% off)
-            </p>
-            <button class="add-to-bag">Add to Bag &#128092;</button>
-            <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <h4>REGAL</h4>
+          <p><font size="4">Frindged Textured blouse Top</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.900</span> (50% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
         </div>
-    </div>
+      </div>
 
-    <div class="items" data-name="Cropped Textured Top" data-price="990.00" data-image="../Images/w3.png" onclick="window.location.href='w1.html';">
+      <div
+        class="items"
+        data-name="Cropped Textured Top"
+        data-price="990.00"
+        data-image="../Images/w3.png"
+      >
         <img src="../Images/w3.png" />
         <div class="title">
-            <h4>REGAL</h4>
-            <p><font size="4">Cropped Textured Top</font></p>
-            <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-              <span style="text-decoration: line-through;">Rs.2400</span>
-              <span style="color: #f1c40f;">Rs.990</span> (45% off)
-            </p>
-            <button class="add-to-bag">Add to Bag &#128092;</button>
-            <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+          <h4>REGAL</h4>
+          <p><font size="4">Cropped Textured Top</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2400</span>
+            <span style="color: #f1c40f">Rs.990</span> (45% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐ (3 out of 5 stars)
+          </p>
         </div>
-    </div>
+      </div>
 
-    <div class="items" data-name="Pullover sweater" data-price="790.00" data-image="../Images/w4.png" onclick="window.location.href='w1.html';">
+      <div
+        class="items"
+        data-name="Pullover sweater"
+        data-price="790.00"
+        data-image="../Images/w4.png"
+      >
         <img src="../Images/w4.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Pullover sweater</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1500</span>
-          <span style="color: #f1c40f;">Rs.790</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Pullover sweater</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1500</span>
+            <span style="color: #f1c40f">Rs.790</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    
-    <div class="items" data-name="Buttoned shirt" data-price="800.00" data-image="../Images/w5.png">
+      <div
+        class="items"
+        data-name="Buttoned shirt"
+        data-price="800.00"
+        data-image="../Images/w5.png"
+      >
         <img src="../Images/w5.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Buttoned shirt</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1999</span>
-          <span style="color: #f1c40f;">Rs.800</span> (50% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Buttoned shirt</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1999</span>
+            <span style="color: #f1c40f">Rs.800</span> (50% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
-    
-    <div class="items"  data-name="White coloured button jacket" data-price="850.00" data-image="../Images/w6.png">
+
+      <div
+        class="items"
+        data-name="White coloured button jacket"
+        data-price="850.00"
+        data-image="../Images/w6.png"
+      >
         <img src="../Images/w6.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">White coloured button jacket</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2000</span>
-          <span style="color: #f1c40f;">Rs.850</span> (51% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">White coloured button jacket</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.850</span> (51% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="image"  data-name="Printed Tshirt" data-price="700.00" data-image="../Images/w7.png">
+      <div
+        class="image"
+        data-name="Printed Tshirt"
+        data-price="700.00"
+        data-image="../Images/w7.png"
+      >
         <img src="../Images/w7.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Printed Tshirt</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1200</span>
-          <span style="color: #f1c40f;">Rs.700</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Printed Tshirt</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1200</span>
+            <span style="color: #f1c40f">Rs.700</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Typographic Tshirt" data-price="600.00" data-image="../Images/w8.png">
+      <div
+        class="items"
+        data-name="Typographic Tshirt"
+        data-price="600.00"
+        data-image="../Images/w8.png"
+      >
         <img src="../Images/w8.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Typographic Tshirt</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1500</span>
-          <span style="color: #f1c40f;">Rs.600</span> (35% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+          <p><font size="4">Typographic Tshirt</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1500</span>
+            <span style="color: #f1c40f">Rs.600</span> (35% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐ (3 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="color block striped knit top" data-price="990.00" data-image="../Images/w9.png">
+      <div
+        class="items"
+        data-name="color block striped knit top"
+        data-price="990.00"
+        data-image="../Images/w9.png"
+      >
         <img src="../Images/w9.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">color block striped knit top</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1500</span>
-          <span style="color: #f1c40f;">Rs.990</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">color block striped knit top</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1500</span>
+            <span style="color: #f1c40f">Rs.990</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Zip up knit Sweater" data-price="750.00" data-image="../Images/w10.png">
+      <div
+        class="items"
+        data-name="Zip up knit Sweater"
+        data-price="750.00"
+        data-image="../Images/w10.png"
+      >
         <img src="../Images/w10.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Zip up knit Sweater</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1250</span>
-          <span style="color: #f1c40f;">Rs.750</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Zip up knit Sweater</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1250</span>
+            <span style="color: #f1c40f">Rs.750</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Mid waist patwork flare leg jeans" data-price="1890.00" data-image="../Images/w11.png">
+      <div
+        class="items"
+        data-name="Mid waist patwork flare leg jeans"
+        data-price="1890.00"
+        data-image="../Images/w11.png"
+      >
         <img src="../Images/w11.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Mid waist patwork flare leg jeans</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1890</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Mid waist patwork flare leg jeans</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1890</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Mid Waist Straight leg jeans" data-price="1400.00" data-image="../Images/w12.png">
+      <div
+        class="items"
+        data-name="Mid Waist Straight leg jeans"
+        data-price="1400.00"
+        data-image="../Images/w12.png"
+      >
         <img src="../Images/w12.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Mid Waist Straight leg jeans</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2000</span>
-          <span style="color: #f1c40f;">Rs.1400</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Mid Waist Straight leg jeans</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.1400</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-      <div class="items" data-name="High waist wide leg jeans" data-price="1690.00" data-image="../Images/w13.png">
+      <div
+        class="items"
+        data-name="High waist wide leg jeans"
+        data-price="1690.00"
+        data-image="../Images/w13.png"
+      >
         <img src="../Images/w13.png" />
-      <div class="title">
-        <h4>REGAL</h4>
-        <p><font size="4">High waist wide leg jeans</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1690</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+        <div class="title">
+          <h4>REGAL</h4>
+          <p><font size="4">High waist wide leg jeans</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1690</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Low waist Straight Leg jeans with side pocket" data-price="1350.00" data-image="../Images/w14.png">
+      <div
+        class="items"
+        data-name="Low waist Straight Leg jeans with side pocket"
+        data-price="1350.00"
+        data-image="../Images/w14.png"
+      >
         <img src="../Images/w14.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p>
-          <font size="4">Low waist Straight Leg jeans with side pocket</font>
-        </p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1350</span> (45% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p>
+            <font size="4">Low waist Straight Leg jeans with side pocket</font>
+          </p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1350</span> (45% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Slit Flare leg jeans" data-price="1490.00" data-image="../Images/w15.png">
+      <div
+        class="items"
+        data-name="Slit Flare leg jeans"
+        data-price="1490.00"
+        data-image="../Images/w15.png"
+      >
         <img src="../Images/w15.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Slit Flare leg jeans</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1700</span>
-          <span style="color: #f1c40f;">Rs.1490</span> (15% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+          <p><font size="4">Slit Flare leg jeans</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1700</span>
+            <span style="color: #f1c40f">Rs.1490</span> (15% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐ (3 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Ditsy Floral Midy Dress" data-price="1890.00" data-image="../Images/w16.png">
+      <div
+        class="items"
+        data-name="Ditsy Floral Midy Dress"
+        data-price="1890.00"
+        data-image="../Images/w16.png"
+      >
         <img src="../Images/w16.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Ditsy Floral Midy Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1890</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Ditsy Floral Midy Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1890</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
-    
-    <div class="items"  data-name="Midi Block Shirt Dress" data-price="1500.00" data-image="../Images/w17.png"> 
+
+      <div
+        class="items"
+        data-name="Midi Block Shirt Dress"
+        data-price="1500.00"
+        data-image="../Images/w17.png"
+      >
         <img src="../Images/w17.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Midi Block Shirt Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2000</span>
-          <span style="color: #f1c40f;">Rs.1500</span> (30% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Midi Block Shirt Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.1500</span> (30% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Belted short sleeve shirt Dress" data-price="1900.00" data-image="../Images/w18.png">
+      <div
+        class="items"
+        data-name="Belted short sleeve shirt Dress"
+        data-price="1900.00"
+        data-image="../Images/w18.png"
+      >
         <img src="../Images/w18.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Belted short sleeve shirt Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1900</span> (25% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Belted short sleeve shirt Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1900</span> (25% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Short wrap knit Dress with Belt" data-price="1600.00" data-image="../Images/w19.png">
+      <div
+        class="items"
+        data-name="Short wrap knit Dress with Belt"
+        data-price="1600.00"
+        data-image="../Images/w19.png"
+      >
         <img src="../Images/w19.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Short wrap knit Dress with Belt</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2000</span>
-          <span style="color: #f1c40f;">Rs.1600</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Short wrap knit Dress with Belt</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.1600</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Ruffle A-Line dress" data-price="1790.00" data-image="../Images/w20.png">
+      <div
+        class="items"
+        data-name="Ruffle A-Line dress"
+        data-price="1790.00"
+        data-image="../Images/w20.png"
+      >
         <img src="../Images/w20.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Ruffle A-Line dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2300</span>
-          <span style="color: #f1c40f;">Rs.1790</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+          <p><font size="4">Ruffle A-Line dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2300</span>
+            <span style="color: #f1c40f">Rs.1790</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐ (3 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Openwork Knit Pullove" data-price="899.00" data-image="../Images/w21.png">
+      <div
+        class="items"
+        data-name="Openwork Knit Pullove"
+        data-price="899.00"
+        data-image="../Images/w21.png"
+      >
         <img src="../Images/w21.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Openwork Knit Pullover</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2000</span>
-          <span style="color: #f1c40f;">Rs.899</span> (45% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Openwork Knit Pullover</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2000</span>
+            <span style="color: #f1c40f">Rs.899</span> (45% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="items"  data-name="Printed Half Placket Sweatshirt" data-price="1590.00" data-image="../Images/w22.png">
+      <div
+        class="items"
+        data-name="Printed Half Placket Sweatshirt"
+        data-price="1590.00"
+        data-image="../Images/w22.png"
+      >
         <img src="../Images/w22.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Printed Half Placket Sweatshirt</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1590</span> (15% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Printed Half Placket Sweatshirt</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1590</span> (15% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Plain pocket Coat" data-price="1750.00" data-image="../Images/w23.png">
+      <div
+        class="items"
+        data-name="Plain pocket Coat"
+        data-price="1750.00"
+        data-image="../Images/w23.png"
+      >
         <img src="../Images/w23.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Plain pocket Coat</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1750</span>
-          <span style="color: #f1c40f;">Rs.1750</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Plain pocket Coat</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1750</span>
+            <span style="color: #f1c40f">Rs.1750</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
-   
-    <div class="items"  data-name="Drawstring shirt dress" data-price="3900.00" data-image="../Images/w24.png">
+
+      <div
+        class="items"
+        data-name="Drawstring shirt dress"
+        data-price="3900.00"
+        data-image="../Images/w24.png"
+      >
         <img src="../Images/w24.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Drawstring shirt dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.4000</span>
-          <span style="color: #f1c40f;">Rs.3900</span> (10% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Drawstring shirt dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.4000</span>
+            <span style="color: #f1c40f">Rs.3900</span> (10% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
-   
-    <div class="items"  data-name="Buttoned A-Line Dress" data-price="2900.00" data-image="../Images/w25.png">
+
+      <div
+        class="items"
+        data-name="Buttoned A-Line Dress"
+        data-price="2900.00"
+        data-image="../Images/w25.png"
+      >
         <img src="../Images/w25.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Buttoned A-Line Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.3500</span>
-          <span style="color: #f1c40f;">Rs.2990</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+          <p><font size="4">Buttoned A-Line Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.3500</span>
+            <span style="color: #f1c40f">Rs.2990</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐ (3 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Patchwork Aline Dress" data-price="1900.00" data-image="../Images/w26.png">
+      <div
+        class="items"
+        data-name="Patchwork Aline Dress"
+        data-price="1900.00"
+        data-image="../Images/w26.png"
+      >
         <img src="../Images/w26.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p ><font size="4">Patchwork Aline Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.2500</span>
-          <span style="color: #f1c40f;">Rs.1900</span> (20% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Patchwork Aline Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.2500</span>
+            <span style="color: #f1c40f">Rs.1900</span> (20% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Smoking Aline Dress" data-price="1600.00" data-image="../Images/w27.png">
+      <div
+        class="items"
+        data-name="Smoking Aline Dress"
+        data-price="1600.00"
+        data-image="../Images/w27.png"
+      >
         <img src="../Images/w27.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Smoking Aline Dress</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.1900</span>
-          <span style="color: #f1c40f;">Rs.1600</span> (15% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+          <p><font size="4">Smoking Aline Dress</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.1900</span>
+            <span style="color: #f1c40f">Rs.1600</span> (15% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐ (4 out of 5 stars)
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="items"  data-name="Long length Dress with Tassels" data-price="2990.00" data-image="../Images/w28.png">
+      <div
+        class="items"
+        data-name="Long length Dress with Tassels"
+        data-price="2990.00"
+        data-image="../Images/w28.png"
+      >
         <img src="../Images/w28.png" />
         <div class="title">
           <h4>REGAL</h4>
-        <p><font size="4">Long length Dress with Tassels</font></p>
-        <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
-          <span style="text-decoration: line-through;">Rs.3500</span>
-          <span style="color: #f1c40f;">Rs.2990</span> (15% off)
-        </p>
-        <button class="add-to-bag">Add to Bag &#128092;</button>
-        <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐⭐ (5 out of 5 stars)</p>
+          <p><font size="4">Long length Dress with Tassels</font></p>
+          <p
+            style="
+              font-family: Arial, sans-serif;
+              color: #333;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            <span style="text-decoration: line-through">Rs.3500</span>
+            <span style="color: #f1c40f">Rs.2990</span> (15% off)
+          </p>
+          <button class="add-to-bag">Add to Bag &#128092;</button>
+          <p style="font-size: 15px; color: #171716; text-align: center">
+            ⭐⭐⭐⭐⭐ (5 out of 5 stars)
+          </p>
         </div>
       </div>
-  </div>
+    </div>
   </body>
+  <script>
+    const addToCartButtons = document.querySelectorAll(".add-to-bag");
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement.parentElement;
+        const name = item.getAttribute("data-name");
+        const price = parseFloat(item.getAttribute("data-price"));
+        const image = item.getAttribute("data-image");
+
+        const cartItem = {
+          name: name,
+          price: price,
+          image: image,
+        };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(cartItem);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Item added to cart!");
+      });
+    });
+  </script>
 </html>
