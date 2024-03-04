@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGAL WOMEN'S FRINGED TEXTURED TOP</title>
+
+    <style>
+       
+
+        /* Style the header */
+        header {
+            background-color: white; /* White background color */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style the logo */
+        .logo img {
+            height: 100px; /* Original logo size */
+        }
+
+        /* Style the search bar */
+        .search-bar {
+            background-color: #e0e0e0; /* Darker shade of white for the search bar */
+            border-radius: 50px; /* More curved corners */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Grow to take available space */
+        }
+
+        .search-bar input {
+            border: none;
+            background-color: transparent;
+            width: 100%; /* Take up all available space */
+            outline: none;
+        }
+
+        /* Style the navigation links */
+        .navigation {
+            background-color: white; /* Change to white background */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Take up all available space */
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 30px; /* Increase padding to add more space */
+            border-radius: 5px; /* Rounded corners for links */
+            margin: 0 40px; /* Increased margin between links */
+            color: #333; /* Text color for links */
+        }
+
+        /* Style the action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px; /* Gap between buttons */
+        }
+
+        /* Style the circle buttons */
+        .circle-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Circular shape for buttons */
+            background-color: #e0e0e0; /* Darker shade of white for the buttons */
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            padding: 2px;
+            margin-left: 1%;
+        }
+        
+
+        .language-dropdown {
+            position: relative;
+            margin-right: 40px; /* Increase the margin-right to add more space */
+        }
+        
+
+        .language-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .language-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .language-dropdown:hover .language-dropdown-content {
+            display: block;
+        }
+
+        #prodetails {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .single-pro-details {
+            width: 50%;
+            height: 400px; 
+            font-size: 16px; 
+            line-height: 1.5; /* Adjust width based on the layout */
+            padding: 20px;
+            box-shadow: none;
+            border-radius: 0;
+            position: relative;
+            margin-top:20px;
+
+        }
+                  
+        #MainImg {
+            width: 100%;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2e2d2f; /* Orange color */
+            color: white;
+            padding: 10px 20px; /* Adjust padding as needed */
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s;
+        }
+        .slider-button:hover {
+            background-color: #4e4e52; /* Darker orange on hover */
+        }
+
+        .add-to-bag {
+            background-color: #2e2d2f; /* Orange color */
+            color: white;
+            padding: 15px 30px; /* Adjust padding as needed */
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 3px 6px rgba(144, 141, 141, 0.2); /* Subtle shadow */
+            transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+            width: 250px;
+        }
+
+        .add-to-bag:hover {
+            background-color: #4e4e52; /* Darker orange on hover */
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img class="hover-effect" src="..\Images\logo.png" alt="Logo">
+    </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search">
+    </div>
+    <div class="action-buttons">
+        <button class="circle-button" id="cartButton">🛒</button> <!-- Replace with cart icon -->
+        <button class="circle-button" id="profileButton">👤</button> <!-- Replace with profile icon -->
+    </div>
+
+    <div class="language-dropdown">
+        <button class="circle-button">🌐</button>
+        <div id="google_translate_element">
+            <div class="language-dropdown-content">
+                <select name="" id="languageselect" onchange="changelayout()">
+                    <option value="en">English</option>
+                    <option value="hin">Hindi</option>
+                    <option value="sp">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="Gr">German</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="navigation">
+    <a href="homepage.html">Home</a>
+    <a href="Shop.html">Shop</a>
+    <a href="promotion.html">Promotions</a>
+    <a href="Blog.html">Blog</a>
+    <a href="Contacts.html">Contacts</a>
+    <a href="Category.html">Categories</a>
+    <a href="About.html">About</a>
+</div>
+
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-details">
+        <img src="../Images/w2.png" width="100%" id="MainImg" alt="Product Image" onclick="openImage()">
+        <button class="slider-button" onclick="nextImage()"> > </button>
+        
+        <!-- JavaScript for sliding the images -->
+        <script>
+            const images = ["../Images/w2.png", "../Images/w2B.png","../Images/w2C.png","../Images/w2D.png","../Images/w2E.png"]; // Array of image URLs
+            let currentImageIndex = 0;
+            const productImage = document.getElementById("MainImg");
+
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                productImage.src = images[currentImageIndex];
+            }
+        </script>
+    </div>
+
+    <div class="single-pro-details">
+        <h1><font size="8">Pullover Sweatshirt</font></h2>
+            <h3>MRP Rs.900</h3>
+            <p><font size="2" color="grey">Inclusive of all taxes </font></p>
+            <span>U.S.NAVAL Pullover Sweatshirt
+        </span>
+        <p>COLOR: grey</p>
+        <p><font size="5">Select your size:</font></p>
+        <select>
+            <option> Select Size </option>
+            <option> XS </option>
+            <option> S </option>
+            <option> M </option>
+            <option> XM </option>
+            <option> XL </option>
+            <option> XXL </option>
+            <option> XXXL </option>
+        </select>
+        <br><br>
+        <button class="add-to-bag" onclick="addtobag()">Add to Bag &#128092;</button>
+        <p>DELIVERY INFO</p>
+        <p><font size="5"> Cash on delivery available in most areas</font></p>
+
+        <p>
+            Fast Delivery available on some sizes Free shipping on this product! (Save ₹99) Please select product size/color along with the pincode to check availability of Fast Delivery at your location
+        </p>
+
+        <p> Standard Delivery: Free shipping on this product! (Save ₹99) Please enter a pincode to check delivery time</p>
+    </div>
+</section>
+
+<script>
+    function openImage(){
+        var imageSrc=document.getElementById("MainImg").src;
+        window.open(imageSrc);
+    }
+
+    function addtobag(){
+        alert("Product added to the Bag!");
+    }
+</script>
+</body>
+</html>
