@@ -20,7 +20,7 @@
         }
 
         header, footer {
-            background-color: #4b0c3d;
+            background-color: #eee3cb;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -125,12 +125,12 @@
     <main>
         <section class="profile">
             <div class="profile-picture">
-                <img src="profile-picture.jpg" alt="Profile Picture">
+                <img src="../Images/profilepic.jpg" alt="Profile Picture">
             </div>
             <div class="profile-details">
-                <h2>John Doe</h2>
-                <p>Email: johndoe@example.com</p>
-                <p>Address: 123 Main St, City, Country</p>
+                <h2>Rihana Doe</h2>
+                <p>Email: rihanadoe@example.com</p>
+                <p>Address: 123 Main St, Mumbai, India</p>
                 <button onclick="window.location.href='account-settings.html';">Edit Profile</button>
             </div>
         </section>
@@ -148,7 +148,7 @@
         <section class="saved-addresses">
             <h2>Saved Addresses</h2>
             <ul>
-                <li>123 Main St, City, Country</li>
+                <li>123 Main St, Mumbai, India</li>
                 <!-- More saved addresses -->
             </ul>
         </section>
@@ -160,8 +160,58 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Your Ecommerce Website</p>
+    <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
+        <div>
+            <p>&copy; 2023 Regal Clothing Website</p>
+            <p>
+                <a href="TOS.html">Terms of Service</a> |
+                <a href="ProP.html">Privacy Policy</a> |
+                <a href="refund.html">Refund Policy</a> |
+                <a href="imprint.html">Imprint</a> |
+                <a href="Cookie.html">Cookie Settings</a> |
+                <a href="Contactc.html">Contact Us</a> |
+                <a href="About.html">About Us</a>
+            </p>
+        </div>
+        <br>
+        <div>
+            <p>Follow us!</p>
+            <a href="#"><img class="hover-effect" src="..\Images\reddit.png" alt="Reddit Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\instagarm.png" alt="Instagram Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\twitter.png" alt="Twitter Icon"></a>
+            <a href="#"><img class="hover-effect" src="..\Images\discord.png" alt="Discord Icon"></a>
+            <!-- Add more social media icons and links as needed -->
+        </div>
+        <br>
+        <div>
+            <p>Subscribe to our newsletter</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <br>
+        <div>
+            <p>Download our app</p>
+            <a href="#"><img src="..\Images\appstore.png" alt="App Store Badge" style="width: 25px;"></a>
+        <a href="#"><img src="..\Images\googleplay.png" alt="Google Play Badge" style="width: 25px;"></a>
+        </div>
+        <br>
+        <div>
+            <p>Get help</p>
+            <a href="#">FAQs</a> |
+            <a href="#">Customer Support</a> |
+            <a href="#">Shipping Info</a> |
+            <a href="#">Returns & Exchanges</a>
+        </div>
+
+        <div class="payment-methods">
+            <img src="..\Images\visa.png" alt="Visa" style="width: 32px;">
+            <img src="..\Images\amex.png" alt="American Express" style="width: 32px;">
+            <img src="..\Images\bhim.png" alt="BHIM" style="width: 32px;">
+            <img src="..\Images\rupay.png" alt="RuPay" style="width: 35px;">
+            <img src="..\Images\paytm1.png" alt="Paytm" style="width: 38px;">
+        </div>
     </footer>
 </body>
 </html>
