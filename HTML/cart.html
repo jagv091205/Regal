@@ -92,13 +92,16 @@
     <div id="cart">
         <div id="cart-items"></div>
         <p class="total">Total: ₹<span id="cart-total" class="total-price">0.00</span></p>
-        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        <button class="checkout-btn" id="checkoutBtn" onclick="checkout()" disabled>Checkout</button>
+        <p id="cartMessage" class="payment-status"></p>
     </div>
 </div>
 
 <script>
 const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const cartMessage = document.getElementById('cartMessage');
 let total = 0;
 
 function displayCartItems() {
@@ -106,6 +109,14 @@ function displayCartItems() {
 
     cartItems.innerHTML = '';
     total = 0;
+
+    if (cart.length === 0) {
+        checkoutBtn.disabled = true;
+        cartMessage.innerText = "Your cart is empty.";
+    } else {
+        checkoutBtn.disabled = false;
+        cartMessage.innerText = "";
+    }
 
     cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
