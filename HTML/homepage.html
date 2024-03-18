@@ -700,10 +700,13 @@
         <span class="next" onclick="nextSlide()">&#10095;</span>
     </div>
     <div>
-        <marquee behavior="scroll" direction="left" style="color: black; font-family: 'Merriweather', serif; font-size: 20px; background-color: rgba(255, 255, 255, 0.858); padding: 1px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            Shipping Worldwide
-        </marquee>
-      </div>
+       <div style="text-align: center;">
+    <marquee behavior="scroll" direction="left" style="color: black; font-family: 'EB Garamond', serif; font-size: 24px;  padding: 3px;  ">
+        <span style="font-size: 32px;">&#8226;</span> Shipping Worldwide &nbsp;&nbsp;&nbsp;&#8226; Shop our new collection&nbsp;&#8226;&nbsp;&nbsp;&nbsp; 20% discount on all first orders&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: 32px;">&#8226;</span>
+    </marquee>
+</div>
+
+        
 
     <div class="button-images">
         <a href="link1.html">
@@ -747,18 +750,28 @@
         </a>
         </div>
         <div class="button-images1">
-        <a href="link2.html">
-            <h2 style="text-align: left; color: black;">InFocus: Accessories</h4>
-            <div class="infocus-images">
-                <img class="hover-effect" src="..\Images\accr.jpg" alt="Infocus Button Image">
-                <video class="hover-effect"  width="1000" height="auto" loop autoplay muted>
-                    <source src="..\Images\Videos\vidimg3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </a>
+            <a href="accessoriesmain.html" id="accessoriesLink">
+                <h2 style="text-align: left; color: black;">InFocus: Accessories</h2>
+                <div class="infocus-images">
+                    <img class="hover-effect" src="..\Images\accr.jpg" alt="Infocus Button Image" onclick="openAccessoriesLink()">
+                    <video class="hover-effect" width="1000" height="auto" loop autoplay muted onclick="openVideoLink()">
+                        <source src="..\Images\Videos\vidimg3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </a>
         </div>
-    </div>
+        
+        <script>
+            function openAccessoriesLink() {
+                window.location.href = 'AccWomen.html'; // Open link for image click
+            }
+        
+            function openVideoLink() {
+                window.location.href = 'AccMen.html'; // Open link for video click
+            }
+        </script>
+        
 
     
     <div class="newsletter-background">
@@ -1032,7 +1045,15 @@
         </div>
     </div>
     
-      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div>
+        <img src="../Images/banner.png" alt="Banner" style="width: 1520px;">  
+      </div>
    
 
         <script>
