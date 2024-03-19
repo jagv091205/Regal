@@ -54,6 +54,11 @@
             border-radius: 3px;
         }
 
+        .error {
+            color: red;
+            font-size: 0.8rem;
+        }
+
         button {
             background-color: #2a1261;
             color: #fff;
@@ -76,22 +81,63 @@
         <form>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value="johndoe">
+            <span id="usernameError" class="error"></span>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" value="johndoe@example.com">
+            <span id="emailError" class="error"></span>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" value="********">
+            <span id="passwordError" class="error"></span>
             <button type="button" onclick="saveChanges()">Save Changes</button>
         </form>
     </div>
 
     <script>
         function saveChanges() {
-            // Here you can add code to save changes to the backend
-            // For now, let's just show a confirmation prompt
-            var confirmation = confirm("Are you sure you want to save changes?");
-            if (confirmation) {
-                alert("Changes saved successfully!");
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var isValid = true;
+
+            // Reset error messages
+            document.getElementById("usernameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            // Validate username
+            if (username === "") {
+                document.getElementById("usernameError").textContent = "Username is required";
+                isValid = false;
             }
+
+            // Validate email
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email is required";
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById("emailError").textContent = "Invalid email format";
+                isValid = false;
+            }
+
+            // Validate password
+            if (password === "") {
+                document.getElementById("passwordError").textContent = "Password is required";
+                isValid = false;
+            }
+
+            // If all fields are valid, proceed with saving changes
+            if (isValid) {
+                var confirmation = confirm("Are you sure you want to save changes?");
+                if (confirmation) {
+                    alert("Changes saved successfully!");
+                }
+            }
+        }
+
+        // Function to validate email format
+        function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
         }
     </script>
 </body>
