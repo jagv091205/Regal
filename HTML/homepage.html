@@ -589,10 +589,58 @@
             margin: 0 10px;
         }
 
+        .add-to-bag {
+            background-color: #270d58; /* Orange color */
+            color: white;
+            padding: 15px 30px; /* Adjust padding as needed */
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 3px 6px rgba(144, 141, 141, 0.2); /* Subtle shadow */
+            transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+            width: 250px;
+          }
+    
+          .add-to-bag:hover {
+            background-color: #4e4e52; /* Darker orange on hover */
+            transform: scale(1.05); /* Slight zoom on hover */
+          }
+    
+          .catalog-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 3;
+            text-align: center;
+            border: 1px solid #cce7d0;
+            row-gap: 2%;
+          }
+    
+          .catalog-items img {
+            width: 24%;
+            height: 400px;
+            row-gap: 5%;
+            width: 100%;
+            display: flex;
+            padding-left: 30px;
+            transition: all 0.2s ease-in-out;
+          }
+    
+          .title {
+            margin-bottom: 10px;
+          }
+    
+          .catalog-items img:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+          }
+
     </style>
 </head>
 <body>
     <header>
+      
+        
         <div class="logo">
             <img class="hover-effect" src="..\Images\logo.png" alt="Logo">
         </div>
@@ -634,9 +682,7 @@
         <a href="About.html">About</a>
     </div>
 
-    <marquee behavior="scroll" direction="left" style="color: black; font-family: 'Merriweather', serif; font-size: 20px; background-color: rgba(255, 255, 255, 0.858); padding: 1px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-        Shipping Worldwide
-    </marquee>
+    
     
            
     <div class="collection-images">
@@ -653,6 +699,15 @@
         <span class="prev" onclick="prevSlide()">&#10094;</span>
         <span class="next" onclick="nextSlide()">&#10095;</span>
     </div>
+    <div>
+       <div style="text-align: center;">
+    <marquee behavior="scroll" direction="left" style="color: black; font-family: 'EB Garamond', serif; font-size: 24px;  padding: 3px;  ">
+        <span style="font-size: 32px;">&#8226;</span> Shipping Worldwide &nbsp;&nbsp;&nbsp;&#8226; Shop our new collection&nbsp;&#8226;&nbsp;&nbsp;&nbsp; 20% discount on all first orders&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: 32px;">&#8226;</span>
+    </marquee>
+</div>
+
+        
+
     <div class="button-images">
         <a href="link1.html">
             <img class="hover-effect" src="..\Images\women.png" alt="Women">
@@ -695,18 +750,28 @@
         </a>
         </div>
         <div class="button-images1">
-        <a href="link2.html">
-            <h2 style="text-align: left; color: black;">InFocus: Accessories</h4>
-            <div class="infocus-images">
-                <img class="hover-effect" src="..\Images\accr.jpg" alt="Infocus Button Image">
-                <video class="hover-effect"  width="1000" height="auto" loop autoplay muted>
-                    <source src="..\Images\Videos\vidimg3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </a>
+            <a href="accessoriesmain.html" id="accessoriesLink">
+                <h2 style="text-align: left; color: black;">InFocus: Accessories</h2>
+                <div class="infocus-images">
+                    <img class="hover-effect" src="..\Images\accr.jpg" alt="Infocus Button Image" onclick="openAccessoriesLink()">
+                    <video class="hover-effect" width="1000" height="auto" loop autoplay muted onclick="openVideoLink()">
+                        <source src="..\Images\Videos\vidimg3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </a>
         </div>
-    </div>
+        
+        <script>
+            function openAccessoriesLink() {
+                window.location.href = 'AccWomen.html'; // Open link for image click
+            }
+        
+            function openVideoLink() {
+                window.location.href = 'AccMen.html'; // Open link for video click
+            }
+        </script>
+        
 
     
     <div class="newsletter-background">
@@ -718,7 +783,7 @@
             </form>
         </div>
     </div>
-
+    
     <!-- Modal dialog -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -726,6 +791,23 @@
             <p>You have successfully subscribed!</p>
         </div>
     </div>
+    
+    <script>
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    
+        // Adding event listener to the form submission
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            
+            // Display the modal
+            document.getElementById('myModal').style.display = 'block';
+        });
+    </script>
+    
 
 
     <div class="latest-news">
@@ -849,23 +931,129 @@
 
     
 
-    <div class="subscription-offer">
-        <div class="subscription-header">
-            <h2>Become a Prime Member!</h2>
-            <p>Unlock exclusive perks and benefits by becoming a Prime Member:</p>
+    <div class="catalog-items">
+        <div class="items" data-name="Fringed Textured Top" data-price="750.00" data-image="../Images/w1.png">
+            <img src="../Images/w1.png" onclick="window.location.href='w1.html';">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p><font size="4">Fringed Textured Top</font></p>
+                <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.1500</span>
+                    <span style="color: #f1c40f;">Rs.750</span> (30% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
         </div>
-        <ul class="perks-list">
-            <li><span>🎁</span> Free shipping on all orders</li>
-            <li><span>💰</span> 10% off your first purchase</li>
-            <li><span>🔥</span> Early access to new arrivals and promotions</li>
-            <li><span>👗</span> Personalized styling recommendations</li>
-            <!-- Add more perks as needed -->
-        </ul>
-        <div class="subscription-footer">
-            <p>Join now for just <span>$9.99/month</span> and elevate your shopping experience!</p>
-            <button onclick="redirectToCardDetails()">Join Prime</button>
+    
+        <div class="items" data-name="Frindged Textured blouse Top" data-price="900.00" data-image="../Images/w2.png">
+            <img src="../Images/w2.png" onclick="window.location.href='w2.html';">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p><font size="4">Frindged Textured blouse Top</font></p>
+                <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.2000</span>
+                    <span style="color: #f1c40f;">Rs.900</span> (50% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Cropped Textured Top" data-price="990.00" data-image="../Images/w3.png">
+            <img src="../Images/w3.png" onclick="window.location.href='w3.html';">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p><font size="4">Cropped Textured Top</font></p>
+                <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.2400</span>
+                    <span style="color: #f1c40f;">Rs.990</span> (45% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Pullover sweater" data-price="790.00" data-image="../Images/w4.png">
+            <img src="../Images/w4.png" onclick="window.location.href='w4.html';">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p><font size="4">Pullover sweater</font></p>
+                <p style="font-family: Arial, sans-serif; color: #333; font-size: 18px; text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.1500</span>
+                    <span style="color: #f1c40f;">Rs.790</span> (25% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 15px; color: #171716; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Typographic Print V-neck Tshirt" data-price="990.00" data-image="../Images/M1.png">
+            <img src="../Images/M1.png" alt="Typographic Print V-neck Tshirt">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p style="text-align: center;"><font size="4">Typographic Print V-neck Tshirt</font></p>
+                <p style="text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.1200</span>
+                    <span style="color: #f1c40f;">Rs.990</span> (20% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Loose Fit Graphic Print Crew" data-price="585.00" data-image="../Images/M2.png">
+            <img src="../Images/M2.png" alt="Loose Fit Graphic Print Crew">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p style="text-align: center;"><font size="4">Loose Fit Graphic Print Crew</font></p>
+                <p style="text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.650</span>
+                    <span style="color: #f1c40f;">Rs.585</span> (10% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Regular Fit Spread Collar Polo" data-price="372.50" data-image="../Images/M3.png">
+            <img src="../Images/M3.png" alt="Regular Fit Spread Collar Polo">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p style="text-align: center;"><font size="4">Regular Fit Spread Collar Polo</font></p>
+                <p style="text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.392</span>
+                    <span style="color: #f1c40f;">Rs.372.50</span> (5% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐ (3 out of 5 stars)</p>
+            </div>
+        </div>
+    
+        <div class="items" data-name="Relaxed fit Graphic Print Crew Neck T shirt" data-price="491.50" data-image="../Images/M4.png">
+            <img src="../Images/M4.png" alt="Relaxed fit Graphic Print Crew Neck T shirt">
+            <div class="title">
+                <h4>REGAL</h4>
+                <p style="text-align: center;"><font size="4">Relaxed fit Graphic Print Crew Neck T shirt</font></p>
+                <p style="text-align: center;">
+                    <span style="text-decoration: line-through;">Rs.540</span>
+                    <span style="color: #f1c40f;">Rs.491.50</span> (9% off)
+                </p>
+                <button class="add-to-bag">Add to Bag &#128092;</button>
+                <p style="font-size: 16px; color: #f1c40f; text-align: center;">⭐⭐⭐⭐ (4 out of 5 stars)</p>
+            </div>
         </div>
     </div>
+    
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div>
+        <img src="../Images/banner.png" alt="Banner" style="width: 1520px;">  
+      </div>
    
 
         <script>
@@ -961,26 +1149,43 @@ function changelayout() {
 }
 
 
-  // Add an event listener to the form submission
-   function openModal() {
-    document.getElementById("myModal").style.display = "block";
-}
+ 
+    // Additional JavaScript code
+    function redirectToCardDetails() {
+        // Redirect the user to the card details page
+        window.location.href = "card_details.html"; // Change the URL to your actual card details page
+    }
 
-// Function to close modal dialog
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-}
+    document.querySelectorAll('.share-button').forEach(button => {
+        button.addEventListener('click', () => {
+            // Handle share functionality
+            // For example, open share modal or copy post link to clipboard
+            const post = button.closest('.post');
+            const postLink = post.querySelector('img').src;
+            // For demonstration, you can use console.log to display the link
+            console.log('Share this post:', postLink);
+        });
+    });
 
-// Add an event listener to the subscribe button
-document.getElementById("subscribeButton").addEventListener("click", function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
+    document.querySelectorAll('.comment-button').forEach(button => {
+        button.addEventListener('click', () => {
+            // Handle comment functionality
+            // For example, open comment section or scroll to comment input
+            const post = button.closest('.post');
+            const commentSection = post.querySelector('.comment-section');
+            commentSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 
-    // Show modal dialog with success message
-    openModal();
-});
+    function changelayout() {
+        var selectElement = document.getElementById("languageselect");
+        var selectedLanguage = selectElement.value;
+        var languageDropdown = document.querySelector(".language-dropdown");
+        console.log("Selected language:", selectedLanguage);
+    }
+</script>
 
-    </script>
+    
     <br>
     <br>
     <br>
@@ -996,7 +1201,7 @@ document.getElementById("subscribeButton").addEventListener("click", function(ev
     
     
    
-    <footer style="background-color: #eee3cb; text-align: center; padding: 20px;">
+    <footer style="background-color: #f8f4eb; text-align: center; padding: 20px;">
         <div>
             <p>&copy; 2023 Regal Clothing Website</p>
             <p>
