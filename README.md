@@ -48,6 +48,9 @@
 
   <p>Feel free to contribute to the project by opening issues or submitting pull requests.</p>
 
+  <h1>The Site is live at:</h1>
+  <p>https://jagv091205.github.io/Regal/HTML/homepage.html</p>
+
   <h2>License</h2>
 
   <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
