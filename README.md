@@ -48,8 +48,8 @@
 
   <p>Feel free to contribute to the project by opening issues or submitting pull requests.</p>
 
-  <h1>The Site is live at:</h1>
-  <p>https://jagv091205.github.io/Regal/HTML/homepage.html</p>
+  <h1>The Site is live:</h1>
+  <a href = "https://jagv091205.github.io/Regal/HTML/homepage.html"> Here </a>
 
   <h2>License</h2>
 
